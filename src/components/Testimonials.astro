@@ -1,0 +1,60 @@
+---
+// Testimonials — real Google Maps reviews
+const { headline, items, source, rating } = Astro.props;
+const mapsUrl = "https://maps.app.goo.gl/Mk9ZmzYgAYzuGxSA6";
+---
+
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-container-low">
+  <div class="max-w-container-max mx-auto">
+    <div class="text-center mb-16">
+      <h2 class="font-display text-4xl md:text-5xl text-on-surface mb-4">{headline}</h2>
+      <div class="w-16 h-1 bg-primary-container mx-auto mb-6"></div>
+      {source && (
+        <a
+          href={mapsUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 font-body text-sm text-on-surface-variant hover:text-primary transition-colors"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="text-primary">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+          </svg>
+          {source}{rating ? ` · ${rating}` : ""}
+        </a>
+      )}
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+      {items.map((t) => (
+        <div class="bg-surface-container-lowest p-8 rounded-2xl border border-outline-variant/20 shadow-sm flex flex-col">
+          <div class="flex gap-1 mb-4">
+            {[1, 2, 3, 4, 5].map(() => (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="text-primary"
+              >
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+            ))}
+          </div>
+          <p class="font-body text-on-surface-variant leading-relaxed italic mb-6 flex-grow">
+            "{t.text}"
+          </p>
+          <div class="flex items-center gap-3 pt-4 border-t border-outline-variant/15">
+            <div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center font-display text-on-primary-container font-bold">
+              {t.name.charAt(0)}
+            </div>
+            <div>
+              <p class="font-body text-sm font-bold text-on-surface">{t.name}</p>
+              <p class="font-body text-xs text-secondary">{t.service}</p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,115 @@
+---
+// Hero section — conversion-first, with auto-rotating background slideshow (10s crossfade)
+const { eyebrow, headline, subheadline, cta_primary, cta_secondary, whatsappLink } = Astro.props;
+
+const heroImages = [
+  "/images/hero-bg.jpg",
+  "/images/hero-2.jpg",
+  "/images/hero-3.jpg",
+  "/images/hero-4.jpg",
+];
+---
+
+<section class="relative min-h-[90vh] flex items-center pt-20">
+  <!-- Slideshow background with crossfade -->
+  <div class="absolute inset-0 z-0" id="hero-slideshow" aria-hidden="true">
+    {heroImages.map((src, i) => (
+      <div
+        class:list={["hero-slide absolute inset-0 bg-cover bg-center transition-opacity duration-[1500ms] ease-in-out", i === 0 ? "opacity-40" : "opacity-0"]}
+        data-slide={i}
+        style={`background-image: url('${src}')`}
+      ></div>
+    ))}
+    <!-- Warm gradient overlay: left-heavy so text stays readable -->
+    <div class="absolute inset-0 bg-gradient-to-r from-surface via-surface/85 to-transparent"></div>
+  </div>
+
+  <div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full">
+    <div class="max-w-2xl">
+      <p class="font-body text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4">
+        {eyebrow}
+      </p>
+      <h1 class="font-display text-4xl md:text-6xl lg:text-7xl text-on-surface leading-[1.1] mb-8">
+        {headline}
+      </h1>
+      <p class="font-body text-base md:text-lg text-on-surface-variant leading-[1.75] max-w-md mb-10">
+        {subheadline}
+      </p>
+      <div class="flex flex-wrap gap-4">
+        <a
+          href={whatsappLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="bg-primary text-on-primary font-body text-sm font-bold uppercase tracking-wide px-8 py-4 rounded-lg hover:opacity-90 transition-all duration-300 btn-primary-shadow inline-flex items-center gap-2"
+        >
+          <span class="material-symbols-outlined text-base">chat</span>
+          {cta_primary}
+        </a>
+        <a
+          href="#portfolio"
+          class="border border-outline text-on-surface font-body text-sm font-bold uppercase tracking-wide px-8 py-4 rounded-lg hover:bg-surface-container-high transition-all duration-300 inline-flex items-center gap-2"
+        >
+          {cta_secondary}
+          <span class="material-symbols-outlined text-base">arrow_forward</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide indicators (dots) -->
+  <div class="absolute bottom-8 right-6 md:right-12 z-20 flex gap-2" id="hero-dots">
+    {heroImages.map((_, i) => (
+      <button
+        class:list={["w-2 h-2 rounded-full transition-all duration-300", i === 0 ? "bg-primary w-6" : "bg-outline/50 hover:bg-primary/60"]}
+        data-dot={i}
+        aria-label={`Slide ${i + 1}`}
+      ></button>
+    ))}
+  </div>
+</section>
+
+<script>
+  const slides = document.querySelectorAll<HTMLElement>("#hero-slideshow .hero-slide");
+  const dots = document.querySelectorAll<HTMLElement>("#hero-dots [data-dot]");
+  const INTERVAL = 10000; // 10 seconds
+
+  let current = 0;
+  let timer: ReturnType<typeof setInterval>;
+
+  function show(index: number) {
+    slides.forEach((s, i) => {
+      // active slide gets opacity-40 (visible over gradient), others fade to 0
+      s.classList.toggle("opacity-40", i === index);
+      s.classList.toggle("opacity-0", i !== index);
+    });
+    dots.forEach((d, i) => {
+      d.classList.toggle("bg-primary", i === index);
+      d.classList.toggle("w-6", i === index);
+      d.classList.toggle("bg-outline/50", i !== index);
+      d.classList.toggle("w-2", i !== index);
+    });
+    current = index;
+  }
+
+  function next() {
+    show((current + 1) % slides.length);
+  }
+
+  function startTimer() {
+    timer = setInterval(next, INTERVAL);
+  }
+
+  function resetTimer() {
+    clearInterval(timer);
+    startTimer();
+  }
+
+  dots.forEach((dot, i) => {
+    dot.addEventListener("click", () => {
+      show(i);
+      resetTimer();
+    });
+  });
+
+  if (slides.length > 1) startTimer();
+</script>

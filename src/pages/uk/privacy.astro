@@ -1,0 +1,91 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import content from "../../content/uk.json";
+
+const langs = [
+  { code: "de", label: "DE", href: "/de" },
+  { code: "uk", label: "UK", href: "/uk" },
+  { code: "ru", label: "RU", href: "/ru" },
+  { code: "en", label: "EN", href: "/en" },
+];
+
+const whatsappLink = `https://wa.me/${content.whatsapp.number}?text=${encodeURIComponent(content.whatsapp.message)}`;
+---
+
+<BaseLayout
+  lang="uk"
+  site={{
+    title: "Політика конфіденційності | Kohana Studio",
+    description: "Політика конфіденційності KOHANA Ästhetik & Schönheit, Анна Кохут.",
+    keywords: content.site.keywords,
+  }}
+  langs={langs}
+  currentLang="uk"
+  whatsappLink={whatsappLink}
+  whatsappLabel="Записатися"
+>
+  <Header nav={content.nav} langs={langs} currentLang="uk" bookLabel={content.nav.book} whatsappLink={whatsappLink} />
+
+  <main class="pt-20">
+    <section class="py-section-gap px-margin-mobile md:px-margin-desktop">
+      <div class="max-w-2xl mx-auto">
+        <h1 class="font-display text-4xl md:text-5xl text-on-surface mb-10">Політика конфіденційності</h1>
+
+        <p class="font-body text-on-surface-variant leading-relaxed mb-6">
+          Ця політика конфіденційності інформує вас про характер, обсяг і мету збору та використання персональних даних на цьому сайті та пов'язаній сторінці Instagram відповідальною особою:
+        </p>
+
+        <p class="font-body text-on-surface leading-relaxed mb-10">
+          Анна Кохут<br />
+          KOHANA Ästhetik &amp; Schönheit<br />
+          Waisenstraße 1<br />
+          10179 Берлін<br />
+          Німеччина
+        </p>
+
+        <h2 class="font-display text-2xl text-on-surface mt-10 mb-3">1. Відповідальна особа</h2>
+        <p class="font-body text-on-surface-variant leading-relaxed mb-6">
+          За обробку даних відповідає зазначена вище власниця сторінки Instagram:<br />
+          <a href="https://www.instagram.com/kohana_studio_berlin/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">https://www.instagram.com/kohana_studio_berlin/</a>
+        </p>
+
+        <h2 class="font-display text-2xl text-on-surface mt-10 mb-3">2. Збір та зберігання персональних даних</h2>
+        <p class="font-body text-on-surface-variant leading-relaxed mb-6">
+          Під час відвідування нашої сторінки Instagram персональні дані обробляються компанією Meta Platforms Ireland Ltd. Детальніше про обробку даних Instagram див.:
+          <a href="https://privacycenter.instagram.com/policy" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">privacycenter.instagram.com/policy</a>
+        </p>
+        <p class="font-body text-on-surface-variant leading-relaxed mb-6">
+          Ми можемо отримувати від Instagram анонімну статистику. Якщо ви звертаєтесь до нас безпосередньо (наприклад, через повідомлення чи коментар), ми обробляємо ваші дані виключно для відповіді на ваш запит.
+        </p>
+
+        <h2 class="font-display text-2xl text-on-surface mt-10 mb-3">3. Правова підстава</h2>
+        <p class="font-body text-on-surface-variant leading-relaxed mb-6">
+          Обробка персональних даних здійснюється відповідно до ст. 6 (1) (f) GDPR (законний інтерес), зокрема для зовнішнього представлення та комунікації.
+        </p>
+
+        <h2 class="font-display text-2xl text-on-surface mt-10 mb-3">4. Передача даних</h2>
+        <p class="font-body text-on-surface-variant leading-relaxed mb-6">
+          Ми не передаємо ваші дані третім особам. Передача даних до Instagram/Meta відбувається автоматично під час використання платформи.
+        </p>
+
+        <h2 class="font-display text-2xl text-on-surface mt-10 mb-3">5. Права суб'єкта даних</h2>
+        <p class="font-body text-on-surface-variant leading-relaxed mb-6">Ви маєте право:</p>
+        <ul class="font-body text-on-surface-variant leading-relaxed mb-6 list-disc pl-6 space-y-2">
+          <li>запросити інформацію про збережені дані (ст. 15 GDPR),</li>
+          <li>на виправлення (ст. 16), видалення (ст. 17), обмеження обробки (ст. 18),</li>
+          <li>на перенесення даних (ст. 20),</li>
+          <li>на заперечення проти обробки (ст. 21).</li>
+        </ul>
+
+        <h2 class="font-display text-2xl text-on-surface mt-10 mb-3">6. Контакт з питань конфіденційності</h2>
+        <p class="font-body text-on-surface-variant leading-relaxed">
+          <a href="mailto:anna.kohut.19901@gmail.com" class="text-primary hover:underline">anna.kohut.19901@gmail.com</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <Footer privacy={content.footer.privacy} imprint={content.footer.imprint} copyright={content.footer.copyright} lang="uk" />
+</BaseLayout>

@@ -1,0 +1,348 @@
+{
+  "lang": "de",
+  "locale": "de_DE",
+  "site": {
+    "title": "Kohana Studio | Permanent Make-up & Ästhetische Kosmetologie",
+    "description": "Professionelles Aesthetic Studio in Deutschland. Permanent Make-up und ästhetische Kosmetologie von Anna Kohut. Natürlich, individuell, zertifiziert.",
+    "keywords": "Permanent Make-up, Kosmetologie, Beauty Salon, Anna Kohut, Powder Brows, Lip Blush, Ästhetik"
+  },
+  "nav": {
+    "services": "Leistungen",
+    "portfolio": "Portfolio",
+    "about": "Über Mich",
+    "contact": "Kontakt",
+    "book": "Jetzt Buchen"
+  },
+  "hero": {
+    "eyebrow": "Schönheit, die natürlich bleibt",
+    "headline": "Natürliche Schönheit, professionell unterstrichen.",
+    "subheadline": "Permanent Make-up & Ästhetische Kosmetologie in Deutschland. Internationale Zertifizierungen, persönliche Beratung und individuelle Behandlung für jede Frau.",
+    "cta_primary": "Termin über WhatsApp buchen",
+    "cta_secondary": "Portfolio ansehen"
+  },
+  "trust": [
+    {
+      "icon": "verified",
+      "label": "International Zertifiziert"
+    },
+    {
+      "icon": "health_and_safety",
+      "label": "Höchste Hygienestandards"
+    },
+    {
+      "icon": "spa",
+      "label": "Individuelle Premium-Betreuung"
+    }
+  ],
+  "about": {
+    "eyebrow": "Über Mich",
+    "headline": "Schönheit, die natürlich bleibt",
+    "intro": "Herzlich willkommen! Ich bin Anna Kohut, spezialisiert auf Permanent Make-up und ästhetische Kosmetologie.",
+    "story": "Mein Weg in die Beauty-Branche begann nicht von Anfang an. Ursprünglich war ich im Bankwesen tätig. Permanent Make-up war zunächst meine Leidenschaft und mein Hobby. Mit der Zeit habe ich jedoch gemerkt, wie sehr mich diese Arbeit erfüllt und inspiriert. Aus meinem Hobby wurde mein Beruf – und heute ist er ein wichtiger Teil meines Lebens. Seit 2022 lebe und arbeite ich in Deutschland. In dieser Zeit habe ich mich kontinuierlich weiterentwickelt, numerous Weiterbildungen, Seminare und Masterclasses besucht und meine Kenntnisse im Bereich Permanent Make-up und Kosmetologie stetig vertieft.",
+    "philosophy": "Bei meiner Arbeit geht es für mich vor allem darum, Ihre natürliche Schönheit zu unterstreichen – nicht sie zu verändern. Ich liebe natürliche, harmonische Ergebnisse, die zu den individuellen Gesichtszügen, dem persönlichen Stil und den Wünschen jeder Frau passen. Jede Kundin ist für mich einzigartig.",
+    "quote": "Und vielleicht liebe ich an meiner Arbeit am meisten den Moment, wenn eine Frau nach der Behandlung in den Spiegel schaut und lächelt. Wenn sie nicht jemand anderen sieht, sondern sich selbst – nur noch etwas gepflegter, frischer und selbstbewusster.",
+    "badges": [
+      "Internationale Diplome",
+      "Regelmäßige Weiterbildung",
+      "Höchste Hygiene"
+    ]
+  },
+  "services": {
+    "headline": "Professionelle Leistungen",
+    "subheadline": "Jede Behandlung beginnt mit einer persönlichen Beratung. Gemeinsam finden wir die passende Lösung für Ihre Wünsche.",
+    "categories": {
+      "permanent_makeup": {
+        "title": "Permanent Make-up",
+        "items": [
+          {
+            "name": "Permanent Make-up\n(Augenbrauen, Lippen, Lidstrich)",
+            "description": "Erstbehandlung",
+            "price": "250 €",
+            "correction": "Korrektur (obligatorisch) nach 1–3 Monaten: 110 €",
+            "image": "/images/services/pm.jpg"
+          },
+          {
+            "name": "Permanent Make-up zwischen den Wimpern\n(Wimpernkranzverdichtung)",
+            "description": "Erstbehandlung",
+            "price": "120 €",
+            "correction": "Korrektur: 70 €",
+            "image": "/images/services/lash-line.jpg"
+          },
+          {
+            "name": "Entfernung von Permanent Make-up mit Remover",
+            "description": "Eine Behandlung",
+            "price": "80 €",
+            "correction": "",
+            "image": "/images/services/remover.jpg"
+          }
+        ],
+        "note": "Auffrischung des Permanent Make-ups nach 1–2 Jahren: 30 % des ursprünglichen Preises."
+      },
+      "cosmetology": {
+        "title": "Ästhetische Kosmetologie",
+        "items": [
+          {
+            "name": "Komplexbehandlung + LED-Therapie",
+            "description": "Bei Pigmentierung, Hautverjüngung, Couperose/Rosacea und Akne.",
+            "duration": "ca. 1–2 Stunden",
+            "price": "95 €",
+            "image": "/images/services/complex.jpg"
+          },
+          {
+            "name": "Reinigung + Peeling + LED",
+            "description": "Für leichte Hautunreinheiten.",
+            "duration": "60 Minuten",
+            "price": "70 €",
+            "image": "/images/services/peeling-mild.jpg"
+          },
+          {
+            "name": "Reinigung + Peeling + LED",
+            "description": "Für ausgeprägte Hautunreinheiten.",
+            "duration": "90 Minuten",
+            "price": "85 €",
+            "image": "/images/services/peeling-strong.jpg"
+          },
+          {
+            "name": "Peeling + Maske",
+            "description": "Sanftes Peeling kombiniert mit einer pflegenden Maske.",
+            "price": "50 €",
+            "image": "/images/services/peeling-mask.jpg"
+          },
+          {
+            "name": "Fraktionierte Mesotherapie",
+            "description": "Innovative Hautverjüngung mittels fraktionierter Mesotherapie.",
+            "price": "110 €",
+            "image": "/images/services/mesotherapy.jpg"
+          },
+          {
+            "name": "Fermentotherapie",
+            "description": "Enzymbasierte Behandlung zur Regeneration der Haut.",
+            "price": "100 €",
+            "image": "/images/services/fermentotherapy.jpg"
+          },
+          {
+            "name": "Gesichtsmassage + Maske",
+            "description": "Mit Multivitamin-Serum.",
+            "price": "85 €",
+            "image": "/images/services/facial-massage.jpg"
+          },
+          {
+            "name": "Hautrehabilitation",
+            "description": "Für trockene und dehydrierte Haut.",
+            "price": "80 €",
+            "image": "/images/services/skin-rehab.jpg"
+          },
+          {
+            "name": "Gesichts-Waxing für Damen",
+            "description": "Oberlippe.",
+            "price": "15 €",
+            "image": "/images/services/facial-waxing.jpg"
+          }
+        ]
+      }
+    }
+  },
+  "portfolio": {
+    "headline": "Kunst im Detail",
+    "subheadline": "Entdecken Sie unser Portfolio an transformierenden Ergebnissen. Wir bedienen stolz unsere vielfältige internationale, deutsche, ukrainische und russische Community.",
+    "filters": [
+      "Brows",
+      "Lips",
+      "Eyes",
+      "Skin"
+    ],
+    "items": [
+      {
+        "category": "Brows",
+        "title": "Brows 1",
+        "subtitle": "Professionelles Ergebnis",
+        "image": "/images/portfolio/brows_0.jpeg"
+      },
+      {
+        "category": "Brows",
+        "title": "Brows 2",
+        "subtitle": "Professionelles Ergebnis",
+        "image": "/images/portfolio/brows_1.jpeg"
+      },
+      {
+        "category": "Brows",
+        "title": "Brows 4",
+        "subtitle": "Professionelles Ergebnis",
+        "image": "/images/portfolio/brows_3.jpeg"
+      },
+      {
+        "category": "Brows",
+        "title": "Brows 5",
+        "subtitle": "Professionelles Ergebnis",
+        "image": "/images/portfolio/brows_4.jpeg"
+      },
+      {
+        "category": "Brows",
+        "title": "Brows 6",
+        "subtitle": "Professionelles Ergebnis",
+        "image": "/images/portfolio/brows_5.jpeg"
+      },
+      {
+        "category": "Lips",
+        "title": "Lips 1",
+        "subtitle": "Professionelles Ergebnis",
+        "image": "/images/portfolio/lips_0.jpeg"
+      },
+      {
+        "category": "Lips",
+        "title": "Lips 2",
+        "subtitle": "Professionelles Ergebnis",
+        "image": "/images/portfolio/lips_1.jpeg"
+      },
+      {
+        "category": "Lips",
+        "title": "Lips 3",
+        "subtitle": "Professionelles Ergebnis",
+        "image": "/images/portfolio/lips_2.jpeg"
+      },
+      {
+        "category": "Lips",
+        "title": "Lips 4",
+        "subtitle": "Professionelles Ergebnis",
+        "image": "/images/portfolio/lips_3.jpeg"
+      },
+      {
+        "category": "Lips",
+        "title": "Lips 5",
+        "subtitle": "Professionelles Ergebnis",
+        "image": "/images/portfolio/lips_4.jpeg"
+      },
+      {
+        "category": "Lips",
+        "title": "Lips 6",
+        "subtitle": "Professionelles Ergebnis",
+        "image": "/images/portfolio/lips_5.jpeg"
+      },
+      {
+        "category": "Eyes",
+        "title": "Eyes 1",
+        "subtitle": "Professionelles Ergebnis",
+        "image": "/images/portfolio/eyes_0.jpeg"
+      },
+      {
+        "category": "Eyes",
+        "title": "Eyes 2",
+        "subtitle": "Professionelles Ergebnis",
+        "image": "/images/portfolio/eyes_1.jpeg"
+      },
+      {
+        "category": "Eyes",
+        "title": "Eyes 3",
+        "subtitle": "Professionelles Ergebnis",
+        "image": "/images/portfolio/eyes_2.jpeg"
+      },
+      {
+        "category": "Eyes",
+        "title": "Eyes 4",
+        "subtitle": "Professionelles Ergebnis",
+        "image": "/images/portfolio/eyes_3.jpeg"
+      },
+      {
+        "category": "Eyes",
+        "title": "Eyes 5",
+        "subtitle": "Professionelles Ergebnis",
+        "image": "/images/portfolio/eyes_4.jpeg"
+      },
+      {
+        "category": "Eyes",
+        "title": "Eyes 6",
+        "subtitle": "Professionelles Ergebnis",
+        "image": "/images/portfolio/eyes_5.jpeg"
+      },
+      {
+        "category": "Skin",
+        "title": "Skin 1",
+        "subtitle": "Professionelles Ergebnis",
+        "image": "/images/portfolio/skin_0.jpeg"
+      },
+      {
+        "category": "Skin",
+        "title": "Skin 2",
+        "subtitle": "Professionelles Ergebnis",
+        "image": "/images/portfolio/skin_1.jpeg"
+      },
+      {
+        "category": "Skin",
+        "title": "Skin 3",
+        "subtitle": "Professionelles Ergebnis",
+        "image": "/images/portfolio/skin_2.jpeg"
+      },
+      {
+        "category": "Skin",
+        "title": "Skin 4",
+        "subtitle": "Professionelles Ergebnis",
+        "image": "/images/portfolio/skin_3.jpeg"
+      },
+      {
+        "category": "Skin",
+        "title": "Skin 5",
+        "subtitle": "Professionelles Ergebnis",
+        "image": "/images/portfolio/skin_4.jpeg"
+      },
+      {
+        "category": "Skin",
+        "title": "Skin 6",
+        "subtitle": "Professionelles Ergebnis",
+        "image": "/images/portfolio/skin_5.jpeg"
+      },
+      {
+        "category": "Skin",
+        "title": "Skin 7",
+        "subtitle": "Professionelles Ergebnis",
+        "image": "/images/portfolio/skin_cosmo_0.jpg"
+      },
+      {
+        "category": "Skin",
+        "title": "Skin 8",
+        "subtitle": "Professionelles Ergebnis",
+        "image": "/images/portfolio/skin_cosmo_1.jpg"
+      },
+      {
+        "category": "Skin",
+        "title": "Skin 9",
+        "subtitle": "Professionelles Ergebnis",
+        "image": "/images/portfolio/skin_cosmo_2.jpg"
+      }
+    ]
+  },
+  "testimonials": {
+    "headline": "Kundinnen-Stimmen",
+    "source": "Google Maps",
+    "rating": "5,0",
+    "items": [
+      {
+        "text": "Ich liebe diesen Salon! Super freundliches und professionelles Team, eine sehr angenehme, fast familiäre Atmosphäre. Tolle Beratung zur Pflege problematischer Haut und ich bin seit Jahren sehr zufrieden mit meinem Permanent Make-up. Auch die Maniküre ist top. Sehr zu empfehlen!",
+        "name": "Victoria Raitses",
+        "service": "Permanent Make-up · Google Maps"
+      },
+      {
+        "text": "Anna ist eine sehr verantwortungsbewusste und qualifizierte Meisterin. Sie liebt ihren Beruf – mit ihr ist es angenehm und harmonisch.",
+        "name": "Kateryna Hlyoza",
+        "service": "Google Maps"
+      }
+    ]
+  },
+  "contact": {
+    "headline": "Kontakt & Buchung",
+    "subheadline": "Vereinbaren Sie einen Termin oder stellen Sie Ihre Fragen. Ich freue mich darauf, Sie persönlich kennenzulernen.",
+    "whatsapp_cta": "Über WhatsApp buchen",
+    "phone": "+49 151 5907 6188",
+    "email": "anna.kohut.19901@gmail.com",
+    "address": "Waisenstraße 1, 10179 Berlin, Deutschland",
+    "hours": "Mo–Fr: 10:00–19:00 | Sa: 10:00–15:00"
+  },
+  "footer": {
+    "privacy": "Datenschutz",
+    "imprint": "Impressum",
+    "copyright": "© 2026 Kohana Studio. Alle Rechte vorbehalten."
+  },
+  "whatsapp": {
+    "number": "4915159076188",
+    "message": "Hallo Anna, ich möchte einen Termin vereinbaren."
+  }
+}

@@ -1,0 +1,91 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import content from "../../content/de.json";
+
+const langs = [
+  { code: "de", label: "DE", href: "/de" },
+  { code: "uk", label: "UK", href: "/uk" },
+  { code: "ru", label: "RU", href: "/ru" },
+  { code: "en", label: "EN", href: "/en" },
+];
+
+const whatsappLink = `https://wa.me/${content.whatsapp.number}?text=${encodeURIComponent(content.whatsapp.message)}`;
+---
+
+<BaseLayout
+  lang="de"
+  site={{
+    title: "Datenschutzerklärung | Kohana Studio",
+    description: "Datenschutzerklärung von KOHANA Ästhetik & Schönheit, Anna Kohut.",
+    keywords: content.site.keywords,
+  }}
+  langs={langs}
+  currentLang="de"
+  whatsappLink={whatsappLink}
+  whatsappLabel="Termin buchen"
+>
+  <Header nav={content.nav} langs={langs} currentLang="de" bookLabel={content.nav.book} whatsappLink={whatsappLink} />
+
+  <main class="pt-20">
+    <section class="py-section-gap px-margin-mobile md:px-margin-desktop">
+      <div class="max-w-2xl mx-auto">
+        <h1 class="font-display text-4xl md:text-5xl text-on-surface mb-10">Datenschutzerklärung</h1>
+
+        <p class="font-body text-on-surface-variant leading-relaxed mb-6">
+          Diese Datenschutzerklärung informiert Sie über die Art, den Umfang und Zweck der Erhebung und Verwendung personenbezogener Daten auf dieser Website und der zugehörigen Instagram-Seite durch die Verantwortliche:
+        </p>
+
+        <p class="font-body text-on-surface leading-relaxed mb-10">
+          Anna Kohut<br />
+          KOHANA Ästhetik &amp; Schönheit<br />
+          Waisenstraße 1<br />
+          10179 Berlin<br />
+          Deutschland
+        </p>
+
+        <h2 class="font-display text-2xl text-on-surface mt-10 mb-3">1. Verantwortliche Stelle</h2>
+        <p class="font-body text-on-surface-variant leading-relaxed mb-6">
+          Verantwortlich für die Datenverarbeitung ist die oben genannte Betreiberin der Instagram-Seite:<br />
+          <a href="https://www.instagram.com/kohana_studio_berlin/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">https://www.instagram.com/kohana_studio_berlin/</a>
+        </p>
+
+        <h2 class="font-display text-2xl text-on-surface mt-10 mb-3">2. Erhebung und Speicherung personenbezogener Daten</h2>
+        <p class="font-body text-on-surface-variant leading-relaxed mb-6">
+          Beim Besuch unserer Instagram-Seite werden personenbezogene Daten von Meta Platforms Ireland Ltd. verarbeitet. Weitere Informationen zur Datenverarbeitung durch Instagram finden Sie unter:
+          <a href="https://privacycenter.instagram.com/policy" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">privacycenter.instagram.com/policy</a>
+        </p>
+        <p class="font-body text-on-surface-variant leading-relaxed mb-6">
+          Wir selbst erhalten von Instagram ggf. anonyme Statistiken. Wenn Sie uns direkt kontaktieren (z. B. per Nachricht oder Kommentar), verarbeiten wir Ihre Daten ausschließlich zur Beantwortung Ihrer Anfrage.
+        </p>
+
+        <h2 class="font-display text-2xl text-on-surface mt-10 mb-3">3. Rechtsgrundlage</h2>
+        <p class="font-body text-on-surface-variant leading-relaxed mb-6">
+          Die Verarbeitung personenbezogener Daten erfolgt gemäß Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse), insbesondere zur Außendarstellung und Kommunikation.
+        </p>
+
+        <h2 class="font-display text-2xl text-on-surface mt-10 mb-3">4. Weitergabe der Daten</h2>
+        <p class="font-body text-on-surface-variant leading-relaxed mb-6">
+          Es erfolgt keine Weitergabe Ihrer Daten an Dritte durch uns. Eine Datenübermittlung an Instagram/Meta erfolgt automatisch durch Nutzung der Plattform.
+        </p>
+
+        <h2 class="font-display text-2xl text-on-surface mt-10 mb-3">5. Betroffenenrechte</h2>
+        <p class="font-body text-on-surface-variant leading-relaxed mb-6">Sie haben das Recht:</p>
+        <ul class="font-body text-on-surface-variant leading-relaxed mb-6 list-disc pl-6 space-y-2">
+          <li>Auskunft über Ihre gespeicherten Daten zu verlangen (Art. 15 DSGVO),</li>
+          <li>Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung (Art. 18),</li>
+          <li>Datenübertragbarkeit (Art. 20),</li>
+          <li>Widerspruch gegen die Verarbeitung (Art. 21).</li>
+        </ul>
+
+        <h2 class="font-display text-2xl text-on-surface mt-10 mb-3">6. Kontakt bei Datenschutzfragen</h2>
+        <p class="font-body text-on-surface-variant leading-relaxed">
+          <a href="mailto:anna.kohut.19901@gmail.com" class="text-primary hover:underline">anna.kohut.19901@gmail.com</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <Footer privacy={content.footer.privacy} imprint={content.footer.imprint} copyright={content.footer.copyright} lang="de" />
+</BaseLayout>

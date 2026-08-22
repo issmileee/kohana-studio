@@ -1,0 +1,133 @@
+---
+// Services section — structured cards with pricing
+// Mobile: sticky category header + stacked cards effect (cards pile up while scrolling)
+const { headline, subheadline, categories } = Astro.props;
+const { whatsappLink } = Astro.props;
+import ServiceCardBody from "./ServiceCardBody.astro";
+
+// Sticky offset increments per card so each card stacks slightly below the previous
+const pmOffsets = categories.permanent_makeup.items.map((_, i) => 120 + i * 16);
+const cosmoOffsets = categories.cosmetology.items.map((_, i) => 120 + i * 12);
+---
+
+<style>
+  /* ── Stacking cards effect (mobile-first) ── */
+  .services-section {
+    /* Offset accounts for the fixed site header (80px) + breathing room */
+    --stack-top: 96px;
+  }
+
+  .category-header {
+    position: sticky;
+    top: 80px; /* sits right below fixed site nav */
+    z-index: 20;
+    background: var(--color-surface-container-low);
+    padding-block: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .category-header {
+      position: static;
+      background: transparent;
+      padding-block: 0;
+    }
+  }
+
+  /* Cards stick & stack on mobile only */
+  .stack-card {
+    position: sticky;
+    top: var(--stack-top);
+  }
+  .stack-card + .stack-card {
+    margin-top: 1rem;
+  }
+  @media (min-width: 768px) {
+    .stack-card {
+      position: static;
+    }
+    .stack-card + .stack-card {
+      margin-top: 0;
+    }
+  }
+</style>
+
+<section id="services" class="services-section py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-container-low">
+  <div class="max-w-container-max mx-auto">
+    <!-- Section header -->
+    <div class="text-center mb-16">
+      <h2 class="font-display text-4xl md:text-5xl text-on-surface mb-4">{headline}</h2>
+      <div class="w-16 h-1 bg-primary-container mx-auto mb-6"></div>
+      <p class="font-body text-lg text-on-surface-variant max-w-2xl mx-auto">{subheadline}</p>
+    </div>
+
+    <!-- Permanent Make-up category -->
+    <div class="mb-20">
+      <div class="category-header">
+        <h3 class="font-display text-3xl text-on-surface text-center md:text-left">
+          {categories.permanent_makeup.title}
+        </h3>
+        {categories.permanent_makeup.note && (
+          <p class="font-body text-sm text-on-surface-variant italic mt-2 md:mb-8 bg-primary-container/10 border-l-2 border-primary-container px-4 py-2 rounded-r-lg">
+            {categories.permanent_makeup.note}
+          </p>
+        )}
+      </div>
+
+      <!-- Mobile: single-column stack / Desktop: grid -->
+      <div class="md:hidden flex flex-col">
+        {categories.permanent_makeup.items.map((item, i) => (
+          <div
+            class="stack-card bg-surface-container-lowest rounded-xl overflow-hidden border border-outline-variant/20 shadow-md flex flex-col"
+            style={`--stack-top: ${pmOffsets[i]}px;`}
+          >
+            <ServiceCardBody item={item} whatsappLink={whatsappLink} bookLabel="Buchen" />
+          </div>
+        ))}
+      </div>
+
+      <!-- Desktop grid -->
+      <div class="hidden md:grid grid-cols-2 lg:grid-cols-3 gap-6">
+        {categories.permanent_makeup.items.map((item) => (
+          <div class="bg-surface-container-lowest rounded-xl overflow-hidden border border-outline-variant/20 shadow-sm hover:shadow-md hover:border-primary/30 transition-all duration-300 flex flex-col">
+            <ServiceCardBody item={item} whatsappLink={whatsappLink} bookLabel="Buchen" />
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Cosmetology category -->
+    <div>
+      <div class="category-header">
+        <h3 class="font-display text-3xl text-on-surface text-center md:text-left">
+          {categories.cosmetology.title}
+        </h3>
+      </div>
+
+      <!-- Mobile: single-column stack -->
+      <div class="md:hidden flex flex-col">
+        {categories.cosmetology.items.map((item, i) => (
+          <div
+            class="stack-card bg-surface-container-lowest rounded-xl overflow-hidden border border-outline-variant/20 shadow-md flex flex-col"
+            style={`--stack-top: ${cosmoOffsets[i]}px;`}
+          >
+            <ServiceCardBody item={item} whatsappLink={whatsappLink} bookLabel="Buchen" />
+          </div>
+        ))}
+      </div>
+
+      <!-- Desktop grid -->
+      <div class="hidden md:grid grid-cols-2 lg:grid-cols-3 gap-6">
+        {categories.cosmetology.items.map((item) => (
+          <div class="bg-surface-container-lowest rounded-xl overflow-hidden border border-outline-variant/20 shadow-sm hover:shadow-md hover:border-primary/30 transition-all duration-300 flex flex-col">
+            <ServiceCardBody item={item} whatsappLink={whatsappLink} bookLabel="Buchen" />
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Card body rendered inline via Astro component below (no client JS needed)
+</script>

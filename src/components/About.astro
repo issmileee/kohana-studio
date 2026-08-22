@@ -1,0 +1,40 @@
+---
+// About section — founder story + trust bridge
+const { eyebrow, headline, intro, story, philosophy, quote, image } = Astro.props;
+---
+
+<section id="about" class="py-section-gap px-margin-mobile md:px-margin-desktop">
+  <div class="max-w-container-max mx-auto">
+    <!-- Top: headline + portrait -->
+    <div class="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
+      <div>
+        <p class="font-body text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4">
+          {eyebrow}
+        </p>
+        <h2 class="font-display text-4xl md:text-5xl text-on-surface mb-6">{headline}</h2>
+        <p class="font-body text-lg text-on-surface-variant leading-relaxed mb-6">{intro}</p>
+        <p class="font-body text-on-surface-variant leading-relaxed mb-6">{story}</p>
+        <p class="font-body text-on-surface-variant leading-relaxed mb-8">{philosophy}</p>
+        <blockquote class="border-l-2 border-primary pl-6">
+          <p class="font-display text-xl md:text-2xl text-on-surface italic leading-snug">
+            "{quote}"
+          </p>
+        </blockquote>
+      </div>
+      <div class="relative">
+        <div
+          class="aspect-[3/4] rounded-2xl overflow-hidden bg-surface-container border border-outline-variant/20"
+        >
+          <img
+            src={image}
+            alt="Anna Kohut — Founder & Aesthetic Expert"
+            class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+            loading="lazy"
+          />
+        </div>
+        <!-- Decorative gold accent -->
+        <div class="absolute -bottom-6 -left-6 w-32 h-32 bg-primary-container/10 rounded-full blur-2xl"></div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,116 @@
+---
+// Header component for Kohana Studio
+// Props: nav, langs, currentLang, bookLabel, whatsappLink
+const { nav, langs, currentLang, bookLabel, whatsappLink } = Astro.props;
+const homeHref = `/${currentLang}`;
+---
+
+<header class="fixed top-0 w-full z-50 glass-nav border-b border-outline-variant/20">
+  <div
+    class="flex justify-between items-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto h-20"
+  >
+    <!-- Brand -->
+    <a
+      href="/"
+      class="font-display text-2xl tracking-tight text-on-surface hover:opacity-80 transition-opacity"
+    >
+      Kohana Studio
+    </a>
+
+    <!-- Desktop Nav -->
+    <nav class="hidden md:flex gap-8 items-center">
+      <a
+        href={`${homeHref}#services`}
+        class="font-body text-sm font-semibold uppercase tracking-widest text-secondary hover:text-primary transition-colors"
+      >
+        {nav.services}
+      </a>
+      <a
+        href={`${homeHref}#portfolio`}
+        class="font-body text-sm font-semibold uppercase tracking-widest text-secondary hover:text-primary transition-colors"
+      >
+        {nav.portfolio}
+      </a>
+      <a
+        href={`${homeHref}#about`}
+        class="font-body text-sm font-semibold uppercase tracking-widest text-secondary hover:text-primary transition-colors"
+      >
+        {nav.about}
+      </a>
+      <a
+        href={`${homeHref}#contact`}
+        class="font-body text-sm font-semibold uppercase tracking-widest text-secondary hover:text-primary transition-colors"
+      >
+        {nav.contact}
+      </a>
+    </nav>
+
+    <!-- Right side: lang switcher + CTA -->
+    <div class="flex items-center gap-4">
+      <!-- Language Switcher -->
+      <div class="hidden md:flex gap-2 font-body text-xs font-bold uppercase tracking-widest text-secondary">
+        {langs.map((l) => (
+          <a
+            href={l.href}
+            class={`transition-colors ${
+              l.code === currentLang
+                ? "text-primary border-b-2 border-primary pb-0.5"
+                : "hover:text-primary"
+            }`}
+            hreflang={l.code}
+          >
+            {l.label}
+          </a>
+        ))}
+      </div>
+
+      <!-- Book Now CTA -->
+      <a
+        href={whatsappLink}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="bg-primary-container text-on-primary-container font-body text-sm font-bold uppercase tracking-wide px-5 py-2.5 rounded-lg hover:opacity-90 transition-all duration-300 btn-primary-shadow"
+      >
+        {bookLabel}
+      </a>
+
+      <!-- Mobile hamburger + label -->
+      <button
+        class="md:hidden flex flex-col items-center gap-0.5 text-on-surface"
+        aria-label="MENU"
+        onclick="document.getElementById('mobile-menu').classList.toggle('hidden')"
+      >
+        <span class="material-symbols-outlined text-2xl leading-none">menu</span>
+        <span class="font-body text-[9px] font-bold uppercase tracking-[0.15em] leading-none text-secondary">
+          MENÜ
+        </span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile menu drawer -->
+  <div
+    id="mobile-menu"
+    class="hidden md:hidden bg-surface-container-lowest border-t border-outline-variant/20"
+  >
+    <div class="flex flex-col px-margin-mobile py-4 gap-4">
+      <a href={`${homeHref}#services`} class="font-body text-on-surface-variant">{nav.services}</a>
+      <a href={`${homeHref}#portfolio`} class="font-body text-on-surface-variant">{nav.portfolio}</a>
+      <a href={`${homeHref}#about`} class="font-body text-on-surface-variant">{nav.about}</a>
+      <a href={`${homeHref}#contact`} class="font-body text-on-surface-variant">{nav.contact}</a>
+      <!-- Mobile lang switcher -->
+      <div class="flex gap-3 pt-2 border-t border-outline-variant/20">
+        {langs.map((l) => (
+          <a
+            href={l.href}
+            class={`font-body text-xs font-bold uppercase tracking-widest ${
+              l.code === currentLang ? "text-primary" : "text-secondary"
+            }`}
+          >
+            {l.label}
+          </a>
+        ))}
+      </div>
+    </div>
+  </div>
+</header>

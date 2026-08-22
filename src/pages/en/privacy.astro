@@ -1,0 +1,91 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import content from "../../content/en.json";
+
+const langs = [
+  { code: "de", label: "DE", href: "/de" },
+  { code: "uk", label: "UK", href: "/uk" },
+  { code: "ru", label: "RU", href: "/ru" },
+  { code: "en", label: "EN", href: "/en" },
+];
+
+const whatsappLink = `https://wa.me/${content.whatsapp.number}?text=${encodeURIComponent(content.whatsapp.message)}`;
+---
+
+<BaseLayout
+  lang="en"
+  site={{
+    title: "Privacy Policy | Kohana Studio",
+    description: "Privacy policy for KOHANA Ästhetik & Schönheit, Anna Kohut.",
+    keywords: content.site.keywords,
+  }}
+  langs={langs}
+  currentLang="en"
+  whatsappLink={whatsappLink}
+  whatsappLabel="Book now"
+>
+  <Header nav={content.nav} langs={langs} currentLang="en" bookLabel={content.nav.book} whatsappLink={whatsappLink} />
+
+  <main class="pt-20">
+    <section class="py-section-gap px-margin-mobile md:px-margin-desktop">
+      <div class="max-w-2xl mx-auto">
+        <h1 class="font-display text-4xl md:text-5xl text-on-surface mb-10">Privacy Policy</h1>
+
+        <p class="font-body text-on-surface-variant leading-relaxed mb-6">
+          This privacy policy informs you about the nature, scope, and purpose of the collection and use of personal data on this website and the associated Instagram page by the data controller:
+        </p>
+
+        <p class="font-body text-on-surface leading-relaxed mb-10">
+          Anna Kohut<br />
+          KOHANA Ästhetik &amp; Schönheit<br />
+          Waisenstraße 1<br />
+          10179 Berlin<br />
+          Germany
+        </p>
+
+        <h2 class="font-display text-2xl text-on-surface mt-10 mb-3">1. Data Controller</h2>
+        <p class="font-body text-on-surface-variant leading-relaxed mb-6">
+          Responsible for data processing is the operator of the Instagram page named above:<br />
+          <a href="https://www.instagram.com/kohana_studio_berlin/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">https://www.instagram.com/kohana_studio_berlin/</a>
+        </p>
+
+        <h2 class="font-display text-2xl text-on-surface mt-10 mb-3">2. Collection and Storage of Personal Data</h2>
+        <p class="font-body text-on-surface-variant leading-relaxed mb-6">
+          When visiting our Instagram page, personal data is processed by Meta Platforms Ireland Ltd. For more information on data processing by Instagram, please visit:
+          <a href="https://privacycenter.instagram.com/policy" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">privacycenter.instagram.com/policy</a>
+        </p>
+        <p class="font-body text-on-surface-variant leading-relaxed mb-6">
+          We ourselves may receive anonymous statistics from Instagram. If you contact us directly (e.g. via message or comment), we process your data solely to respond to your inquiry.
+        </p>
+
+        <h2 class="font-display text-2xl text-on-surface mt-10 mb-3">3. Legal Basis</h2>
+        <p class="font-body text-on-surface-variant leading-relaxed mb-6">
+          The processing of personal data is carried out in accordance with Art. 6(1)(f) GDPR (legitimate interest), in particular for public representation and communication.
+        </p>
+
+        <h2 class="font-display text-2xl text-on-surface mt-10 mb-3">4. Disclosure of Data</h2>
+        <p class="font-body text-on-surface-variant leading-relaxed mb-6">
+          We do not disclose your data to third parties. Data transmission to Instagram/Meta occurs automatically through use of the platform.
+        </p>
+
+        <h2 class="font-display text-2xl text-on-surface mt-10 mb-3">5. Your Rights</h2>
+        <p class="font-body text-on-surface-variant leading-relaxed mb-6">You have the right to:</p>
+        <ul class="font-body text-on-surface-variant leading-relaxed mb-6 list-disc pl-6 space-y-2">
+          <li>request information about your stored data (Art. 15 GDPR),</li>
+          <li>rectification (Art. 16), erasure (Art. 17), restriction of processing (Art. 18),</li>
+          <li>data portability (Art. 20),</li>
+          <li>object to processing (Art. 21).</li>
+        </ul>
+
+        <h2 class="font-display text-2xl text-on-surface mt-10 mb-3">6. Contact for Privacy Questions</h2>
+        <p class="font-body text-on-surface-variant leading-relaxed">
+          <a href="mailto:anna.kohut.19901@gmail.com" class="text-primary hover:underline">anna.kohut.19901@gmail.com</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <Footer privacy={content.footer.privacy} imprint={content.footer.imprint} copyright={content.footer.copyright} lang="en" />
+</BaseLayout>

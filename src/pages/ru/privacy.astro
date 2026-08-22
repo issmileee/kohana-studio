@@ -1,0 +1,91 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import content from "../../content/ru.json";
+
+const langs = [
+  { code: "de", label: "DE", href: "/de" },
+  { code: "uk", label: "UK", href: "/uk" },
+  { code: "ru", label: "RU", href: "/ru" },
+  { code: "en", label: "EN", href: "/en" },
+];
+
+const whatsappLink = `https://wa.me/${content.whatsapp.number}?text=${encodeURIComponent(content.whatsapp.message)}`;
+---
+
+<BaseLayout
+  lang="ru"
+  site={{
+    title: "Политика конфиденциальности | Kohana Studio",
+    description: "Политика конфиденциальности KOHANA Ästhetik & Schönheit, Анна Кохут.",
+    keywords: content.site.keywords,
+  }}
+  langs={langs}
+  currentLang="ru"
+  whatsappLink={whatsappLink}
+  whatsappLabel="Записаться"
+>
+  <Header nav={content.nav} langs={langs} currentLang="ru" bookLabel={content.nav.book} whatsappLink={whatsappLink} />
+
+  <main class="pt-20">
+    <section class="py-section-gap px-margin-mobile md:px-margin-desktop">
+      <div class="max-w-2xl mx-auto">
+        <h1 class="font-display text-4xl md:text-5xl text-on-surface mb-10">Политика конфиденциальности</h1>
+
+        <p class="font-body text-on-surface-variant leading-relaxed mb-6">
+          Настоящая политика конфиденциальности информирует вас о характере, объёме и цели сбора и использования персональных данных на этом сайте и связанной странице Instagram ответственным лицом:
+        </p>
+
+        <p class="font-body text-on-surface leading-relaxed mb-10">
+          Анна Кохут<br />
+          KOHANA Ästhetik &amp; Schönheit<br />
+          Waisenstraße 1<br />
+          10179 Берлин<br />
+          Германия
+        </p>
+
+        <h2 class="font-display text-2xl text-on-surface mt-10 mb-3">1. Ответственное лицо</h2>
+        <p class="font-body text-on-surface-variant leading-relaxed mb-6">
+          За обработку данных отвечает указанная выше владелица страницы Instagram:<br />
+          <a href="https://www.instagram.com/kohana_studio_berlin/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">https://www.instagram.com/kohana_studio_berlin/</a>
+        </p>
+
+        <h2 class="font-display text-2xl text-on-surface mt-10 mb-3">2. Сбор и хранение персональных данных</h2>
+        <p class="font-body text-on-surface-variant leading-relaxed mb-6">
+          При посещении нашей страницы Instagram персональные данные обрабатываются компанией Meta Platforms Ireland Ltd. Подробнее об обработке данных Instagram см.:
+          <a href="https://privacycenter.instagram.com/policy" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">privacycenter.instagram.com/policy</a>
+        </p>
+        <p class="font-body text-on-surface-variant leading-relaxed mb-6">
+          Мы можем получать от Instagram анонимную статистику. Если вы обращаетесь к нам напрямую (например, через сообщение или комментарий), мы обрабатываем ваши данные исключительно для ответа на ваш запрос.
+        </p>
+
+        <h2 class="font-display text-2xl text-on-surface mt-10 mb-3">3. Правовое основание</h2>
+        <p class="font-body text-on-surface-variant leading-relaxed mb-6">
+          Обработка персональных данных осуществляется в соответствии со ст. 6 (1) (f) GDPR (законный интерес), в частности для внешнего представления и коммуникации.
+        </p>
+
+        <h2 class="font-display text-2xl text-on-surface mt-10 mb-3">4. Передача данных</h2>
+        <p class="font-body text-on-surface-variant leading-relaxed mb-6">
+          Мы не передаём ваши данные третьим лицам. Передача данных в Instagram/Meta происходит автоматически при использовании платформы.
+        </p>
+
+        <h2 class="font-display text-2xl text-on-surface mt-10 mb-3">5. Права субъекта данных</h2>
+        <p class="font-body text-on-surface-variant leading-relaxed mb-6">Вы имеете право:</p>
+        <ul class="font-body text-on-surface-variant leading-relaxed mb-6 list-disc pl-6 space-y-2">
+          <li>запросить информацию о хранящихся у нас данных (ст. 15 GDPR),</li>
+          <li>на исправление (ст. 16), удаление (ст. 17), ограничение обработки (ст. 18),</li>
+          <li>на переносимость данных (ст. 20),</li>
+          <li>на возражение против обработки (ст. 21).</li>
+        </ul>
+
+        <h2 class="font-display text-2xl text-on-surface mt-10 mb-3">6. Контакт по вопросам конфиденциальности</h2>
+        <p class="font-body text-on-surface-variant leading-relaxed">
+          <a href="mailto:anna.kohut.19901@gmail.com" class="text-primary hover:underline">anna.kohut.19901@gmail.com</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <Footer privacy={content.footer.privacy} imprint={content.footer.imprint} copyright={content.footer.copyright} lang="ru" />
+</BaseLayout>

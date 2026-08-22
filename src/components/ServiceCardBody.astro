@@ -1,0 +1,38 @@
+---
+// Card body for service cards (shared between mobile stack & desktop grid)
+const { item, whatsappLink, bookLabel } = Astro.props;
+---
+
+<div class="aspect-[4/3] overflow-hidden bg-surface-container">
+  <div
+    class="w-full h-full bg-cover bg-center hover:scale-105 transition-transform duration-700"
+    style={`background-image: url('${item.image || '/images/services/cosmo.jpg'}')`}
+  ></div>
+</div>
+<div class="p-5 flex flex-col flex-grow">
+  <h4 class="font-display text-base text-on-surface mb-2 whitespace-pre-line leading-tight">
+    {item.name}
+  </h4>
+  <p class="font-body text-xs text-on-surface-variant leading-relaxed mb-3 flex-grow">
+    {item.description}
+  </p>
+  <div class="border-t border-outline-variant/15 pt-3 mt-auto">
+    <div class="flex items-center justify-between gap-2 mb-1">
+      {item.duration && (
+        <span class="font-body text-xs text-secondary">{item.duration}</span>
+      )}
+      <span class="font-body text-sm font-bold text-primary ml-auto">{item.price}</span>
+    </div>
+    {item.correction && (
+      <p class="font-body text-[11px] text-secondary">{item.correction}</p>
+    )}
+  </div>
+  <a
+    href={whatsappLink}
+    target="_blank"
+    rel="noopener noreferrer"
+    class="mt-4 w-full text-center bg-transparent border border-outline text-on-surface font-body text-xs font-bold uppercase tracking-widest px-4 py-2.5 rounded-lg hover:bg-surface-container-high transition-colors"
+  >
+    {bookLabel}
+  </a>
+</div>

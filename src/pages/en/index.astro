@@ -1,0 +1,98 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import Hero from "../../components/Hero.astro";
+import TrustBar from "../../components/TrustBar.astro";
+import About from "../../components/About.astro";
+import Services from "../../components/Services.astro";
+import Portfolio from "../../components/Portfolio.astro";
+import Testimonials from "../../components/Testimonials.astro";
+import Contact from "../../components/Contact.astro";
+import Footer from "../../components/Footer.astro";
+
+import content from "../../content/en.json";
+
+const langs = [
+  { code: "de", label: "DE", href: "/de" },
+  { code: "uk", label: "UK", href: "/uk" },
+  { code: "ru", label: "RU", href: "/ru" },
+  { code: "en", label: "EN", href: "/en" },
+];
+
+const whatsappLink = `https://wa.me/${content.whatsapp.number}?text=${encodeURIComponent(content.whatsapp.message)}`;
+---
+
+<BaseLayout
+  lang="en"
+  site={content.site}
+  langs={langs}
+  currentLang="en"
+  whatsappLink={whatsappLink}
+  whatsappLabel="Book now"
+>
+  <Header
+    nav={content.nav}
+    langs={langs}
+    currentLang="en"
+    bookLabel={content.nav.book}
+    whatsappLink={whatsappLink}
+  />
+
+  <main class="pt-20">
+    <Hero
+      eyebrow={content.hero.eyebrow}
+      headline={content.hero.headline}
+      subheadline={content.hero.subheadline}
+      cta_primary={content.hero.cta_primary}
+      cta_secondary={content.hero.cta_secondary}
+      whatsappLink={whatsappLink}
+    />
+
+    <TrustBar items={content.trust} />
+
+    <About
+      eyebrow={content.about.eyebrow}
+      headline={content.about.headline}
+      intro={content.about.intro}
+      story={content.about.story}
+      philosophy={content.about.philosophy}
+      quote={content.about.quote}
+      badges={content.about.badges}
+      image="/images/about-anna.jpg"
+    />
+
+    <Services
+      headline={content.services.headline}
+      subheadline={content.services.subheadline}
+      categories={content.services.categories}
+      whatsappLink={whatsappLink}
+    />
+
+    <Portfolio
+      headline={content.portfolio.headline}
+      subheadline={content.portfolio.subheadline}
+      filters={content.portfolio.filters}
+      items={content.portfolio.items}
+    />
+
+    <Testimonials headline={content.testimonials.headline} items={content.testimonials.items} source={content.testimonials.source} rating={content.testimonials.rating} />
+
+    <Contact
+      headline={content.contact.headline}
+      subheadline={content.contact.subheadline}
+      whatsapp_cta={content.contact.whatsapp_cta}
+      phone={content.contact.phone}
+      email={content.contact.email}
+      address={content.contact.address}
+      hours={content.contact.hours}
+      whatsappLink={whatsappLink}
+    />
+  </main>
+
+  <Footer
+    privacy={content.footer.privacy}
+    imprint={content.footer.imprint}
+    copyright={content.footer.copyright}
+    lang="en"
+  />
+</BaseLayout>

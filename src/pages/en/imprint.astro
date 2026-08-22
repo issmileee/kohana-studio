@@ -1,0 +1,78 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import content from "../../content/en.json";
+
+const langs = [
+  { code: "de", label: "DE", href: "/de" },
+  { code: "uk", label: "UK", href: "/uk" },
+  { code: "ru", label: "RU", href: "/ru" },
+  { code: "en", label: "EN", href: "/en" },
+];
+
+const whatsappLink = `https://wa.me/${content.whatsapp.number}?text=${encodeURIComponent(content.whatsapp.message)}`;
+---
+
+<BaseLayout
+  lang="en"
+  site={{
+    title: "Imprint | Kohana Studio",
+    description: "Legal notice for KOHANA Ästhetik & Schönheit, Anna Kohut.",
+    keywords: content.site.keywords,
+  }}
+  langs={langs}
+  currentLang="en"
+  whatsappLink={whatsappLink}
+  whatsappLabel="Book now"
+>
+  <Header nav={content.nav} langs={langs} currentLang="en" bookLabel={content.nav.book} whatsappLink={whatsappLink} />
+
+  <main class="pt-20">
+    <section class="py-section-gap px-margin-mobile md:px-margin-desktop">
+      <div class="max-w-2xl mx-auto">
+        <h1 class="font-display text-4xl md:text-5xl text-on-surface mb-10">Imprint</h1>
+
+        <p class="font-body text-on-surface-variant leading-relaxed mb-6">
+          Responsible for the content of this website pursuant to § 5 TMG (German Telemedia Act):
+        </p>
+
+        <p class="font-body text-on-surface leading-relaxed mb-6">
+          Anna Kohut<br />
+          KOHANA Ästhetik &amp; Schönheit<br />
+          Waisenstraße 1<br />
+          10179 Berlin<br />
+          Germany
+        </p>
+
+        <p class="font-body text-on-surface leading-relaxed mb-6">
+          Phone: <a href="tel:+4915159076188" class="text-primary hover:underline">+49 151 5907 6188</a><br />
+          Email: <a href="mailto:anna.kohut.19901@gmail.com" class="text-primary hover:underline">anna.kohut.19901@gmail.com</a><br />
+          Instagram: <a href="https://www.instagram.com/kohana_studio_berlin/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">@kohana_studio_berlin</a>
+        </p>
+
+        <h2 class="font-display text-2xl text-on-surface mt-10 mb-3">Supervisory Authority</h2>
+        <p class="font-body text-on-surface-variant leading-relaxed mb-6">
+          Bezirksamt Pankow von Berlin – Ordnungsamt (District Office Pankow of Berlin – Regulatory Office)<br />
+          Fröbelstr. 17, Haus 6, 10405 Berlin
+        </p>
+
+        <h2 class="font-display text-2xl text-on-surface mt-10 mb-3">VAT Identification Number</h2>
+        <p class="font-body text-on-surface-variant leading-relaxed mb-6">– not provided –</p>
+
+        <h2 class="font-display text-2xl text-on-surface mt-10 mb-3">Professional Title</h2>
+        <p class="font-body text-on-surface-variant leading-relaxed mb-6">
+          Beautician / PMU Artist<br />
+          Conferred in: Germany
+        </p>
+
+        <h2 class="font-display text-2xl text-on-surface mt-10 mb-3">Disclaimer</h2>
+        <p class="font-body text-on-surface-variant leading-relaxed">
+          Despite careful review of content, we assume no liability for the content of external links. The operators of the linked pages are solely responsible for their content.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <Footer privacy={content.footer.privacy} imprint={content.footer.imprint} copyright={content.footer.copyright} lang="en" />
+</BaseLayout>

@@ -1,0 +1,78 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import content from "../../content/de.json";
+
+const langs = [
+  { code: "de", label: "DE", href: "/de" },
+  { code: "uk", label: "UK", href: "/uk" },
+  { code: "ru", label: "RU", href: "/ru" },
+  { code: "en", label: "EN", href: "/en" },
+];
+
+const whatsappLink = `https://wa.me/${content.whatsapp.number}?text=${encodeURIComponent(content.whatsapp.message)}`;
+---
+
+<BaseLayout
+  lang="de"
+  site={{
+    title: "Impressum | Kohana Studio",
+    description: "Impressum von KOHANA Ästhetik & Schönheit, Anna Kohut.",
+    keywords: content.site.keywords,
+  }}
+  langs={langs}
+  currentLang="de"
+  whatsappLink={whatsappLink}
+  whatsappLabel="Termin buchen"
+>
+  <Header nav={content.nav} langs={langs} currentLang="de" bookLabel={content.nav.book} whatsappLink={whatsappLink} />
+
+  <main class="pt-20">
+    <section class="py-section-gap px-margin-mobile md:px-margin-desktop">
+      <div class="max-w-2xl mx-auto">
+        <h1 class="font-display text-4xl md:text-5xl text-on-surface mb-10">Impressum</h1>
+
+        <p class="font-body text-on-surface-variant leading-relaxed mb-6">
+          Verantwortlich für den Inhalt dieser Seite gemäß § 5 TMG:
+        </p>
+
+        <p class="font-body text-on-surface leading-relaxed mb-6">
+          Anna Kohut<br />
+          KOHANA Ästhetik &amp; Schönheit<br />
+          Waisenstraße 1<br />
+          10179 Berlin<br />
+          Deutschland
+        </p>
+
+        <p class="font-body text-on-surface leading-relaxed mb-6">
+          Telefon: <a href="tel:+4915159076188" class="text-primary hover:underline">+49 151 5907 6188</a><br />
+          E-Mail: <a href="mailto:anna.kohut.19901@gmail.com" class="text-primary hover:underline">anna.kohut.19901@gmail.com</a><br />
+          Instagram: <a href="https://www.instagram.com/kohana_studio_berlin/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">@kohana_studio_berlin</a>
+        </p>
+
+        <h2 class="font-display text-2xl text-on-surface mt-10 mb-3">Zuständige Aufsichtsbehörde</h2>
+        <p class="font-body text-on-surface-variant leading-relaxed mb-6">
+          Bezirksamt Pankow von Berlin – Ordnungsamt<br />
+          Fröbelstr. 17, Haus 6, 10405 Berlin
+        </p>
+
+        <h2 class="font-display text-2xl text-on-surface mt-10 mb-3">Umsatzsteuer-Identifikationsnummer</h2>
+        <p class="font-body text-on-surface-variant leading-relaxed mb-6">– nicht angegeben –</p>
+
+        <h2 class="font-display text-2xl text-on-surface mt-10 mb-3">Berufsbezeichnung</h2>
+        <p class="font-body text-on-surface-variant leading-relaxed mb-6">
+          Kosmetikerin / PMU Artist<br />
+          Verliehen in: Deutschland
+        </p>
+
+        <h2 class="font-display text-2xl text-on-surface mt-10 mb-3">Haftungsausschluss</h2>
+        <p class="font-body text-on-surface-variant leading-relaxed">
+          Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <Footer privacy={content.footer.privacy} imprint={content.footer.imprint} copyright={content.footer.copyright} lang="de" />
+</BaseLayout>

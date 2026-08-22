@@ -1,0 +1,354 @@
+{
+  "lang": "uk",
+  "locale": "uk_UA",
+  "site": {
+    "title": "Kohana Studio | Перманентний макіяж та естетична косметологія",
+    "description": "Професійна естет-студія в Німеччині. Перманентний макіяж та естетична косметологія від Анни Кохут. Природно, індивідуально, сертифіковано.",
+    "keywords": "Перманентний макіяж, косметологія, салон краси, Анна Кохут, пудрові брови, губи, естетика"
+  },
+  "nav": {
+    "services": "Послуги",
+    "portfolio": "Портфоліо",
+    "about": "Про Мене",
+    "contact": "Контакти",
+    "book": "Записатися"
+  },
+  "hero": {
+    "eyebrow": "Краса, що залишається природною",
+    "headline": "Природна краса, професійно підкреслена.",
+    "subheadline": "Перманентний макіяж та естетична косметологія в Німеччині. Міжнародні сертифікати, індивідуальна консультація та особистий підхід до кожної жінки.",
+    "cta_primary": "Записатися через WhatsApp",
+    "cta_secondary": "Подивитись портфоліо"
+  },
+  "trust": [
+    {
+      "icon": "verified",
+      "label": "Міжнародна сертифікація"
+    },
+    {
+      "icon": "health_and_safety",
+      "label": "Найвищі стандарти гігієни"
+    },
+    {
+      "icon": "spa",
+      "label": "Індивідуальний преміум-догляд"
+    }
+  ],
+  "about": {
+    "eyebrow": "Про Мене",
+    "headline": "Краса, що залишається природною",
+    "intro": "Ласкаво просимо! Мене звати Анна Кохут, я спеціалізуюся на перманентному макіяжі та естетичній косметології.",
+    "story": "Мій шлях в індустрію краси не починався з самого початку. Спочатку я працювала в банківській сфері. Перманентний макіяж спочатку був моїм захопленням і хобі. З часом я зрозуміла, наскільки ця робота мене наповнює і надихає. Моє хобі стало моєю професією – і сьогодні це важлива частина мого життя. З 2022 року я живу і працюю в Німеччині. За цей час я постійно розвивалася, відвідувала численні курси підвищення кваліфікації, семінари та майстер-класи, поглиблюючи свої знання в галузі перманентного макіяжу та косметології.",
+    "philosophy": "Для мене моя робота — це насамперед підкреслення вашої природної краси – не зміна її. Я люблю природні, гармонійні результати, які підходять до індивідуальних рис обличчя, особистого стилю та побажань кожної жінки. Кожна клієнтка для мене унікальна.",
+    "quote": "І, мабуть, найбільше я люблю в своїй роботі момент, коли жінка після процедури дивиться в дзеркало і посміхається. Коли вона бачить не когось іншого, а себе – лише трохи доглянутішою, свіжішою і впевненішою.",
+    "badges": [
+      "Міжнародні дипломи",
+      "Постійне навчання",
+      "Найвища гігієна"
+    ]
+  },
+  "services": {
+    "headline": "Професійні послуги",
+    "subheadline": "Кожна процедура починається з особистої консультації. Разом ми знайдемо найкраще рішення для ваших побажань.",
+    "categories": {
+      "permanent_makeup": {
+        "title": "Перманентний макіяж",
+        "items": [
+          {
+            "name": "Перманентний макіяж\n(Брови, Губи, Підводка)",
+            "description": "Перша процедура",
+            "price": "250 €",
+            "correction": "Корекція (обов'язкова) через 1–3 місяці: 110 €",
+            "image": "/images/services/pm.jpg"
+          },
+          {
+            "name": "Ущільнення міжвійного простору",
+            "description": "Перша процедура",
+            "price": "120 €",
+            "correction": "Корекція: 70 €",
+            "image": "/images/services/lash-line.jpg"
+          },
+          {
+            "name": "Видалення ремувером",
+            "description": "Одна процедура",
+            "price": "80 €",
+            "correction": "",
+            "image": "/images/services/remover.jpg"
+          }
+        ],
+        "note": "Оновлення перманентного макіяжу через 1–2 роки: 30% від початкової вартості."
+      },
+      "cosmetology": {
+        "title": "Естетична косметологія",
+        "items": [
+          {
+            "name": "Комплекс процедур + LED-терапія",
+            "description": "При пігментації, омолодженні, куперозі/розацеа та акне.",
+            "duration": "близько 1–2 годин",
+            "price": "95 €",
+            "image": "/images/services/complex.jpg"
+          },
+          {
+            "name": "Чищення + пілінг + LED",
+            "description": "При невеликій кількості висипань.",
+            "duration": "60 хвилин",
+            "price": "70 €",
+            "image": "/images/services/peeling-mild.jpg"
+          },
+          {
+            "name": "Чищення + пілінг + LED",
+            "description": "При великій кількості висипань.",
+            "duration": "90 хвилин",
+            "price": "85 €",
+            "image": "/images/services/peeling-strong.jpg"
+          },
+          {
+            "name": "Пілінг + маска",
+            "description": "М'який пілінг у поєднанні з живильною маскою.",
+            "price": "50 €",
+            "image": "/images/services/peeling-mask.jpg"
+          },
+          {
+            "name": "Фракційна мезотерапія",
+            "description": "Інноваційне омолодження шкіри за допомогою фракційної мезотерапії.",
+            "price": "110 €",
+            "image": "/images/services/mesotherapy.jpg"
+          },
+          {
+            "name": "Ферментотерапія",
+            "description": "Ферментативна терапія для регенерації шкіри.",
+            "price": "100 €",
+            "image": "/images/services/fermentotherapy.jpg"
+          },
+          {
+            "name": "Масаж обличчя + маска",
+            "description": "З мультивітамінною сироваткою.",
+            "price": "85 €",
+            "image": "/images/services/facial-massage.jpg"
+          },
+          {
+            "name": "Реабілітація шкіри",
+            "description": "Для сухої та зневодненої шкіри.",
+            "price": "80 €",
+            "image": "/images/services/skin-rehab.jpg"
+          },
+          {
+            "name": "Воскова депіляція для жінок",
+            "description": "Над верхньою губою.",
+            "price": "15 €",
+            "image": "/images/services/facial-waxing.jpg"
+          }
+        ]
+      }
+    }
+  },
+  "portfolio": {
+    "headline": "Мистецтво в деталях",
+    "subheadline": "Ознайомтеся з нашим портфоліо трансформаційних результатів. Ми з гордістю обслуговуємо нашу різноманітну міжнародну, німецьку, українську та російську спільноту.",
+    "filters": [
+      "Брови",
+      "Губи",
+      "Очі",
+      "Шкіра"
+    ],
+    "items": [
+      {
+        "category": "Брови",
+        "title": "Брови 1",
+        "subtitle": "Professionelles Ergebnis",
+        "image": "/images/portfolio/brows_0.jpeg"
+      },
+      {
+        "category": "Брови",
+        "title": "Брови 2",
+        "subtitle": "Professionelles Ergebnis",
+        "image": "/images/portfolio/brows_1.jpeg"
+      },
+      {
+        "category": "Брови",
+        "title": "Брови 3",
+        "subtitle": "Professionelles Ergebnis",
+        "image": "/images/portfolio/brows_2.jpeg"
+      },
+      {
+        "category": "Брови",
+        "title": "Брови 4",
+        "subtitle": "Professionelles Ergebnis",
+        "image": "/images/portfolio/brows_3.jpeg"
+      },
+      {
+        "category": "Брови",
+        "title": "Брови 5",
+        "subtitle": "Professionelles Ergebnis",
+        "image": "/images/portfolio/brows_4.jpeg"
+      },
+      {
+        "category": "Брови",
+        "title": "Брови 6",
+        "subtitle": "Professionelles Ergebnis",
+        "image": "/images/portfolio/brows_5.jpeg"
+      },
+      {
+        "category": "Губи",
+        "title": "Губи 1",
+        "subtitle": "Professionelles Ergebnis",
+        "image": "/images/portfolio/lips_0.jpeg"
+      },
+      {
+        "category": "Губи",
+        "title": "Губи 2",
+        "subtitle": "Professionelles Ergebnis",
+        "image": "/images/portfolio/lips_1.jpeg"
+      },
+      {
+        "category": "Губи",
+        "title": "Губи 3",
+        "subtitle": "Professionelles Ergebnis",
+        "image": "/images/portfolio/lips_2.jpeg"
+      },
+      {
+        "category": "Губи",
+        "title": "Губи 4",
+        "subtitle": "Professionelles Ergebnis",
+        "image": "/images/portfolio/lips_3.jpeg"
+      },
+      {
+        "category": "Губи",
+        "title": "Губи 5",
+        "subtitle": "Professionelles Ergebnis",
+        "image": "/images/portfolio/lips_4.jpeg"
+      },
+      {
+        "category": "Губи",
+        "title": "Губи 6",
+        "subtitle": "Professionelles Ergebnis",
+        "image": "/images/portfolio/lips_5.jpeg"
+      },
+      {
+        "category": "Очі",
+        "title": "Очі 1",
+        "subtitle": "Professionelles Ergebnis",
+        "image": "/images/portfolio/eyes_0.jpeg"
+      },
+      {
+        "category": "Очі",
+        "title": "Очі 2",
+        "subtitle": "Professionelles Ergebnis",
+        "image": "/images/portfolio/eyes_1.jpeg"
+      },
+      {
+        "category": "Очі",
+        "title": "Очі 3",
+        "subtitle": "Professionelles Ergebnis",
+        "image": "/images/portfolio/eyes_2.jpeg"
+      },
+      {
+        "category": "Очі",
+        "title": "Очі 4",
+        "subtitle": "Professionelles Ergebnis",
+        "image": "/images/portfolio/eyes_3.jpeg"
+      },
+      {
+        "category": "Очі",
+        "title": "Очі 5",
+        "subtitle": "Professionelles Ergebnis",
+        "image": "/images/portfolio/eyes_4.jpeg"
+      },
+      {
+        "category": "Очі",
+        "title": "Очі 6",
+        "subtitle": "Professionelles Ergebnis",
+        "image": "/images/portfolio/eyes_5.jpeg"
+      },
+      {
+        "category": "Шкіра",
+        "title": "Шкіра 1",
+        "subtitle": "Professionelles Ergebnis",
+        "image": "/images/portfolio/skin_0.jpeg"
+      },
+      {
+        "category": "Шкіра",
+        "title": "Шкіра 2",
+        "subtitle": "Professionelles Ergebnis",
+        "image": "/images/portfolio/skin_1.jpeg"
+      },
+      {
+        "category": "Шкіра",
+        "title": "Шкіра 3",
+        "subtitle": "Professionelles Ergebnis",
+        "image": "/images/portfolio/skin_2.jpeg"
+      },
+      {
+        "category": "Шкіра",
+        "title": "Шкіра 4",
+        "subtitle": "Professionelles Ergebnis",
+        "image": "/images/portfolio/skin_3.jpeg"
+      },
+      {
+        "category": "Шкіра",
+        "title": "Шкіра 5",
+        "subtitle": "Professionelles Ergebnis",
+        "image": "/images/portfolio/skin_4.jpeg"
+      },
+      {
+        "category": "Шкіра",
+        "title": "Шкіра 6",
+        "subtitle": "Professionelles Ergebnis",
+        "image": "/images/portfolio/skin_5.jpeg"
+      },
+      {
+        "category": "Шкіра",
+        "title": "Шкіра 7",
+        "subtitle": "Professionelles Ergebnis",
+        "image": "/images/portfolio/skin_cosmo_0.jpg"
+      },
+      {
+        "category": "Шкіра",
+        "title": "Шкіра 8",
+        "subtitle": "Professionelles Ergebnis",
+        "image": "/images/portfolio/skin_cosmo_1.jpg"
+      },
+      {
+        "category": "Шкіра",
+        "title": "Шкіра 9",
+        "subtitle": "Professionelles Ergebnis",
+        "image": "/images/portfolio/skin_cosmo_2.jpg"
+      }
+    ]
+  },
+  "testimonials": {
+    "headline": "Відгуки клієнток",
+    "source": "Google Maps",
+    "rating": "5,0",
+    "items": [
+      {
+        "text": "Я обожнюю цей салон! Дуже дружня і професійна команда, приємна, майже сімейна атмосфера. Чудова консультація щодо догляду за проблемною шкірою, і я вже багато років дуже задоволена своїм перманентним макіяжем. Манікюр теж чудовий. Дуже рекомендую!",
+        "name": "Victoria Raitses",
+        "service": "Перманентний макіяж · Google Maps"
+      },
+      {
+        "text": "Дуже відповідальний і кваліфікований майстер, Анна любить свою справу, з нею комфортно і гармонійно.",
+        "name": "Катерина Гльоза",
+        "service": "Google Maps"
+      }
+    ]
+  },
+  "contact": {
+    "headline": "Контакти та запис",
+    "subheadline": "Запишіться на прийом або задайте свої запитання. Я з нетерпінням чекаю особистої зустрічі з вами.",
+    "whatsapp_cta": "Записатися через WhatsApp",
+    "phone": "+49 151 5907 6188",
+    "email": "anna.kohut.19901@gmail.com",
+    "address": "Waisenstraße 1, 10179 Берлін, Німеччина",
+    "hours": "Пн–Пт: 10:00–19:00 | Сб: 10:00–15:00"
+  },
+  "footer": {
+    "privacy": "Політика конфіденційності",
+    "imprint": "Вихідні дані",
+    "copyright": "© 2026 Kohana Studio. Всі права захищено."
+  },
+  "whatsapp": {
+    "number": "4915159076188",
+    "message": "Вітаю, Анно! Я хотіла б записатися на прийом."
+  }
+}

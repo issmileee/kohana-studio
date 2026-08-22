@@ -1,0 +1,137 @@
+@import "tailwindcss";
+
+/* Kohana Studio — Ethos & Aura Design System */
+/* Minimalist Luxury · Medical-grade professionalism · Warm neutrals */
+
+@theme {
+  /* ── Surface palette: "Skin and Stone" warm neutrals ── */
+  --color-surface: #fbf9f8;
+  --color-surface-dim: #dbd9d9;
+  --color-surface-bright: #fbf9f8;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f5f3f3;
+  --color-surface-container: #efeded;
+  --color-surface-container-high: #eae8e7;
+  --color-surface-container-highest: #e4e2e2;
+
+  /* ── On-surface text ── */
+  --color-on-surface: #1b1c1c;
+  --color-on-surface-variant: #4e4639;
+  --color-inverse-surface: #303030;
+  --color-inverse-on-surface: #f2f0f0;
+
+  /* ── Outline & borders ── */
+  --color-outline: #7f7667;
+  --color-outline-variant: #d1c5b4;
+  --color-surface-tint: #775a19;
+
+  /* ── Primary: Muted Gold ── */
+  --color-primary: #775a19;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #c5a059;
+  --color-on-primary-container: #4e3700;
+  --color-inverse-primary: #e9c176;
+
+  /* ── Secondary: Deep Slate ── */
+  --color-secondary: #596060;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #dae1e1;
+  --color-on-secondary-container: #5d6464;
+
+  /* ── Tertiary: Cream / Beige ── */
+  --color-tertiary: #5f5e5b;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: #a7a5a1;
+  --color-on-tertiary-container: #3b3b38;
+
+  /* ── Fixed / Dim tonal pairs ── */
+  --color-primary-fixed: #ffdea5;
+  --color-primary-fixed-dim: #e9c176;
+  --color-on-primary-fixed: #261900;
+  --color-on-primary-fixed-variant: #5d4201;
+
+  --color-secondary-fixed: #dde4e3;
+  --color-secondary-fixed-dim: #c1c8c7;
+  --color-on-secondary-fixed: #161d1d;
+  --color-on-secondary-fixed-variant: #414848;
+
+  --color-tertiary-fixed: #e5e2dd;
+  --color-tertiary-fixed-dim: #c9c6c2;
+  --color-on-tertiary-fixed: #1c1c19;
+  --color-on-tertiary-fixed-variant: #474743;
+
+  /* ── Background ── */
+  --color-background: #fbf9f8;
+  --color-on-background: #1b1c1c;
+  --color-surface-variant: #e4e2e2;
+
+  /* ── Error ── */
+  --color-error: #ba1a1a;
+  --color-on-error: #ffffff;
+  --color-error-container: #ffdad6;
+  --color-on-error-container: #93000a;
+
+  /* ── Typography ── */
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-body: "Montserrat", system-ui, -apple-system, sans-serif;
+
+  /* ── Spacing ── */
+  --spacing-unit: 8px;
+  --spacing-gutter: 24px;
+  --spacing-margin-mobile: 20px;
+  --spacing-margin-desktop: 64px;
+  --spacing-section-gap: 120px;
+
+  /* ── Max width ── */
+  --container-max: 1200px;
+
+  /* ── Border radius ── */
+  --radius-sm: 0.125rem;
+  --radius-default: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-full: 9999px;
+}
+
+/* ── Base ── */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-surface);
+  color: var(--color-on-surface);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 500;
+}
+
+/* ── Selection ── */
+::selection {
+  background-color: var(--color-primary-container);
+  color: var(--color-on-primary-container);
+}
+
+/* ── Glass nav ── */
+.glass-nav {
+  background: rgba(251, 249, 248, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* ── Primary button shadow ── */
+.btn-primary-shadow {
+  box-shadow: 0 4px 20px -5px rgba(119, 90, 25, 0.4);
+}
+
+/* ── Focus ring ── */
+*:focus-visible {
+  outline: 2px solid var(--color-primary-container);
+  outline-offset: 2px;
+}

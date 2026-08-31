@@ -7,6 +7,7 @@ import ServiceCardBody from "./ServiceCardBody.astro";
 
 // Sticky offset increments per card so each card stacks slightly below the previous
 const pmOffsets = categories.permanent_makeup.items.map((_, i) => 120 + i * 16);
+const waxOffsets = categories.waxing_brows_lashes.items.map((_, i) => 120 + i * 16);
 const cosmoOffsets = categories.cosmetology.items.map((_, i) => 120 + i * 12);
 ---
 
@@ -89,6 +90,36 @@ const cosmoOffsets = categories.cosmetology.items.map((_, i) => 120 + i * 12);
       <!-- Desktop grid -->
       <div class="hidden md:grid grid-cols-2 lg:grid-cols-3 gap-6">
         {categories.permanent_makeup.items.map((item) => (
+          <div class="bg-surface-container-lowest rounded-xl overflow-hidden border border-outline-variant/20 shadow-sm hover:shadow-md hover:border-primary/30 transition-all duration-300 flex flex-col">
+            <ServiceCardBody item={item} whatsappLink={whatsappLink} bookLabel="Buchen" />
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Waxing, Brows & Lashes category -->
+    <div class="mb-20">
+      <div class="category-header">
+        <h3 class="font-display text-3xl text-on-surface text-center md:text-left">
+          {categories.waxing_brows_lashes.title}
+        </h3>
+      </div>
+
+      <!-- Mobile: single-column stack / Desktop: grid -->
+      <div class="md:hidden flex flex-col">
+        {categories.waxing_brows_lashes.items.map((item, i) => (
+          <div
+            class="stack-card bg-surface-container-lowest rounded-xl overflow-hidden border border-outline-variant/20 shadow-md flex flex-col"
+            style={`--stack-top: ${waxOffsets[i]}px;`}
+          >
+            <ServiceCardBody item={item} whatsappLink={whatsappLink} bookLabel="Buchen" />
+          </div>
+        ))}
+      </div>
+
+      <!-- Desktop grid -->
+      <div class="hidden md:grid grid-cols-2 lg:grid-cols-3 gap-6">
+        {categories.waxing_brows_lashes.items.map((item) => (
           <div class="bg-surface-container-lowest rounded-xl overflow-hidden border border-outline-variant/20 shadow-sm hover:shadow-md hover:border-primary/30 transition-all duration-300 flex flex-col">
             <ServiceCardBody item={item} whatsappLink={whatsappLink} bookLabel="Buchen" />
           </div>

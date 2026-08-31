@@ -1,0 +1,49 @@
+---
+// Special Offers section — attractive deals and promotions
+const { headline, subheadline, items } = Astro.props;
+---
+
+<section id="special-offers" class="py-section-gap px-margin-mobile md:px-margin-desktop bg-gradient-to-b from-primary-container/10 to-transparent">
+  <div class="max-w-container-max mx-auto">
+    <!-- Section Header -->
+    <div class="text-center mb-12">
+      <h2 class="font-display text-4xl md:text-5xl text-on-surface mb-4">{headline}</h2>
+      <div class="w-16 h-1 bg-primary-container mx-auto mb-6"></div>
+      <p class="font-body text-lg text-on-surface-variant max-w-2xl mx-auto">{subheadline}</p>
+    </div>
+
+    <!-- Offers Grid -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {items.map((offer) => (
+        <div class="bg-surface-container-lowest rounded-2xl overflow-hidden border border-primary/20 shadow-lg relative group hover:shadow-xl hover:border-primary/40 transition-all duration-300">
+          <!-- Badge -->
+          <div class="absolute top-4 right-4 bg-primary text-on-primary text-xs font-bold px-3 py-1.5 rounded-full z-10">
+            {offer.savings}
+          </div>
+          
+          <!-- Content -->
+          <div class="p-6">
+            <h3 class="font-display text-xl text-on-surface mb-2">{offer.title}</h3>
+            <p class="font-body text-sm text-on-surface-variant mb-4 leading-relaxed">{offer.description}</p>
+            
+            <!-- Price -->
+            <div class="flex items-baseline gap-3 mb-4">
+              <span class="font-display text-3xl text-primary font-bold">{offer.sale_price}</span>
+              <span class="font-body text-lg text-secondary line-through">{offer.original_price}</span>
+            </div>
+            
+            <!-- CTA -->
+            <div class="pt-4 border-t border-outline-variant/20">
+              <a
+                href="#contact"
+                class="block text-center font-body text-sm font-bold uppercase tracking-widest text-primary hover:text-primary-container transition-colors"
+              >
+                Jetzt buchen →
+              </a>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

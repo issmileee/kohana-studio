@@ -18,7 +18,7 @@ const homeHref = `/${currentLang}`;
     </a>
 
     <!-- Desktop Nav -->
-    <nav class="hidden md:flex gap-8 items-center">
+    <nav class="hidden md:flex gap-6 items-center">
       <a
         href={`${homeHref}#services`}
         class="font-body text-sm font-semibold uppercase tracking-widest text-secondary hover:text-primary transition-colors"
@@ -30,6 +30,12 @@ const homeHref = `/${currentLang}`;
         class="font-body text-sm font-semibold uppercase tracking-widest text-secondary hover:text-primary transition-colors"
       >
         {nav.portfolio}
+      </a>
+      <a
+        href={`${homeHref}#testimonials`}
+        class="font-body text-sm font-semibold uppercase tracking-widest text-secondary hover:text-primary transition-colors"
+      >
+        {nav.testimonials}
       </a>
       <a
         href={`${homeHref}#about`}
@@ -47,7 +53,7 @@ const homeHref = `/${currentLang}`;
 
     <!-- Right side: lang switcher + CTA -->
     <div class="flex items-center gap-4">
-      <!-- Language Switcher -->
+      <!-- Language Switcher - Always visible -->
       <div class="hidden md:flex gap-2 font-body text-xs font-bold uppercase tracking-widest text-secondary">
         {langs.map((l) => (
           <a
@@ -64,12 +70,29 @@ const homeHref = `/${currentLang}`;
         ))}
       </div>
 
+      <!-- Mobile Language Switcher - Visible outside hamburger -->
+      <div class="md:hidden flex gap-2 font-body text-xs font-bold uppercase tracking-widest text-secondary">
+        {langs.map((l) => (
+          <a
+            href={l.href}
+            class={`transition-colors ${
+              l.code === currentLang
+                ? "text-primary"
+                : "hover:text-primary opacity-70"
+            }`}
+            hreflang={l.code}
+          >
+            {l.label}
+          </a>
+        ))}
+      </div>
+
       <!-- Book Now CTA -->
       <a
         href={whatsappLink}
         target="_blank"
         rel="noopener noreferrer"
-        class="bg-primary-container text-on-primary-container font-body text-sm font-bold uppercase tracking-wide px-5 py-2.5 rounded-lg hover:opacity-90 transition-all duration-300 btn-primary-shadow"
+        class="bg-primary-container text-on-primary-container font-body text-sm font-bold uppercase tracking-wide px-5 py-2.5 rounded-lg hover:opacity-90 transition-all duration-300 btn-primary-shadow hidden md:inline-flex"
       >
         {bookLabel}
       </a>
@@ -96,21 +119,9 @@ const homeHref = `/${currentLang}`;
     <div class="flex flex-col px-margin-mobile py-4 gap-4">
       <a href={`${homeHref}#services`} class="font-body text-on-surface-variant">{nav.services}</a>
       <a href={`${homeHref}#portfolio`} class="font-body text-on-surface-variant">{nav.portfolio}</a>
+      <a href={`${homeHref}#testimonials`} class="font-body text-on-surface-variant">{nav.testimonials}</a>
       <a href={`${homeHref}#about`} class="font-body text-on-surface-variant">{nav.about}</a>
       <a href={`${homeHref}#contact`} class="font-body text-on-surface-variant">{nav.contact}</a>
-      <!-- Mobile lang switcher -->
-      <div class="flex gap-3 pt-2 border-t border-outline-variant/20">
-        {langs.map((l) => (
-          <a
-            href={l.href}
-            class={`font-body text-xs font-bold uppercase tracking-widest ${
-              l.code === currentLang ? "text-primary" : "text-secondary"
-            }`}
-          >
-            {l.label}
-          </a>
-        ))}
-      </div>
     </div>
   </div>
 </header>

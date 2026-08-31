@@ -11,19 +11,20 @@
     "portfolio": "Portfolio",
     "about": "About",
     "contact": "Contact",
-    "book": "Book Now"
+    "book": "Book Now",
+    "testimonials": "Reviews"
   },
   "hero": {
     "eyebrow": "Beauty that remains natural",
     "headline": "Natural beauty, professionally enhanced.",
-    "subheadline": "Permanent make-up & aesthetic cosmetology in Germany. International certifications, personalized consultation, and individual treatment for every woman.",
+    "subheadline": "Permanent make-up & aesthetic cosmetology in Germany. 7 years of experience, international certifications, personalized consultation, and individual treatment for every woman.",
     "cta_primary": "Book via WhatsApp",
     "cta_secondary": "View Portfolio"
   },
   "trust": [
     {
       "icon": "verified",
-      "label": "Internationally Certified"
+      "label": "7 Years Experience"
     },
     {
       "icon": "health_and_safety",
@@ -37,14 +38,14 @@
   "about": {
     "eyebrow": "About Me",
     "headline": "Beauty that remains natural",
-    "intro": "Welcome! I am Anna Kohut, specializing in permanent make-up and aesthetic cosmetology.",
+    "intro": "Welcome! I am Anna Kohut, specializing in permanent make-up and aesthetic cosmetology with 7 years of experience.",
     "story": "My path into the beauty industry didn't start from the very beginning. Originally, I worked in banking, and permanent make-up was initially my passion and hobby. Over time, I realized how much this work fulfills and inspires me. What started as a hobby has become my profession – and today it is an important part of my life. Since 2022, I have been living and working in Germany. During this time, I have continuously developed my skills, attending numerous further training courses, seminars, and masterclasses to deepen my knowledge in the field of permanent make-up and cosmetology.",
     "philosophy": "For me, my work is above all about emphasizing your natural beauty – not changing it. I love natural, harmonious results that suit the individual facial features, personal style, and wishes of every woman. Every client is unique to me.",
     "quote": "And perhaps what I love most about my work is the moment when a woman looks in the mirror after treatment and smiles. When she doesn't see someone else, but herself – only a little more groomed, fresher, and more confident.",
     "badges": [
+      "7 Years Experience",
       "International Diplomas",
-      "Regular Training",
-      "Highest Hygiene"
+      "Regular Training"
     ]
   },
   "services": {
@@ -136,6 +137,35 @@
             "name": "Facial Waxing for Women",
             "description": "Upper lip.",
             "price": "€15",
+            "image": "/images/services/facial-waxing.jpg"
+          }
+        ]
+      },
+      "waxing_brows_lashes": {
+        "title": "Lashes, Brows & Waxing",
+        "items": [
+          {
+            "name": "Eyelash Lift",
+            "description": "Naturally curled, longer eyelashes through professional lifting.",
+            "price": "45 €",
+            "image": "/images/services/lash-lifting.jpg"
+          },
+          {
+            "name": "Eyebrow Tinting + Shaping",
+            "description": "Perfectly shaped and color-matched brows for a fresh look.",
+            "price": "45 €",
+            "image": "/images/services/brows.jpg"
+          },
+          {
+            "name": "Brow Lifting + Tinting + Shaping",
+            "description": "Combined treatment: lifting for voluminous brows, followed by tinting and precise shaping.",
+            "price": "60 €",
+            "image": "/images/services/brows.jpg"
+          },
+          {
+            "name": "Facial Waxing for Women",
+            "description": "Gentle hair removal in the face – upper lip, chin or complete face care.",
+            "price": "15 €",
             "image": "/images/services/facial-waxing.jpg"
           }
         ]
@@ -344,5 +374,32 @@
   "whatsapp": {
     "number": "4915159076188",
     "message": "Hello Anna, I would like to book an appointment."
+  },
+  "special_offers": {
+    "headline": "Special Offers",
+    "subheadline": "Take advantage of our current promotions and packages at attractive prices.",
+    "items": [
+      {
+        "title": "Premium Care Complex",
+        "description": "Cleansing + Massage + Mask + LED Therapy (2 hours)",
+        "original_price": "€125",
+        "sale_price": "€100",
+        "savings": "Save €25"
+      },
+      {
+        "title": "2 Zones Permanent Make-up",
+        "description": "Brows + Lips combined",
+        "original_price": "€500",
+        "sale_price": "€390",
+        "savings": "Save €110"
+      },
+      {
+        "title": "Lash Look Complete",
+        "description": "Lash Lift + Eyebrow Tinting",
+        "original_price": "€90",
+        "sale_price": "€75",
+        "savings": "Save €15"
+      }
+    ]
   }
 }

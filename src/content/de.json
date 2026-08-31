@@ -10,20 +10,21 @@
     "services": "Leistungen",
     "portfolio": "Portfolio",
     "about": "Über Mich",
+    "testimonials": "Bewertungen",
     "contact": "Kontakt",
     "book": "Jetzt Buchen"
   },
   "hero": {
     "eyebrow": "Schönheit, die natürlich bleibt",
     "headline": "Natürliche Schönheit, professionell unterstrichen.",
-    "subheadline": "Permanent Make-up & Ästhetische Kosmetologie in Deutschland. Internationale Zertifizierungen, persönliche Beratung und individuelle Behandlung für jede Frau.",
+    "subheadline": "Permanent Make-up & Ästhetische Kosmetologie in Deutschland. 7 Jahre Erfahrung, internationale Zertifizierungen, persönliche Beratung und individuelle Behandlung für jede Frau.",
     "cta_primary": "Termin über WhatsApp buchen",
     "cta_secondary": "Portfolio ansehen"
   },
   "trust": [
     {
       "icon": "verified",
-      "label": "International Zertifiziert"
+      "label": "7 Jahre Erfahrung"
     },
     {
       "icon": "health_and_safety",
@@ -37,14 +38,14 @@
   "about": {
     "eyebrow": "Über Mich",
     "headline": "Schönheit, die natürlich bleibt",
-    "intro": "Herzlich willkommen! Ich bin Anna Kohut, spezialisiert auf Permanent Make-up und ästhetische Kosmetologie.",
+    "intro": "Herzlich willkommen! Ich bin Anna Kohut, spezialisiert auf Permanent Make-up und ästhetische Kosmetologie mit 7 Jahren Erfahrung.",
     "story": "Mein Weg in die Beauty-Branche begann nicht von Anfang an. Ursprünglich war ich im Bankwesen tätig. Permanent Make-up war zunächst meine Leidenschaft und mein Hobby. Mit der Zeit habe ich jedoch gemerkt, wie sehr mich diese Arbeit erfüllt und inspiriert. Aus meinem Hobby wurde mein Beruf – und heute ist er ein wichtiger Teil meines Lebens. Seit 2022 lebe und arbeite ich in Deutschland. In dieser Zeit habe ich mich kontinuierlich weiterentwickelt, numerous Weiterbildungen, Seminare und Masterclasses besucht und meine Kenntnisse im Bereich Permanent Make-up und Kosmetologie stetig vertieft.",
     "philosophy": "Bei meiner Arbeit geht es für mich vor allem darum, Ihre natürliche Schönheit zu unterstreichen – nicht sie zu verändern. Ich liebe natürliche, harmonische Ergebnisse, die zu den individuellen Gesichtszügen, dem persönlichen Stil und den Wünschen jeder Frau passen. Jede Kundin ist für mich einzigartig.",
     "quote": "Und vielleicht liebe ich an meiner Arbeit am meisten den Moment, wenn eine Frau nach der Behandlung in den Spiegel schaut und lächelt. Wenn sie nicht jemand anderen sieht, sondern sich selbst – nur noch etwas gepflegter, frischer und selbstbewusster.",
     "badges": [
+      "7 Jahre Erfahrung",
       "Internationale Diplome",
-      "Regelmäßige Weiterbildung",
-      "Höchste Hygiene"
+      "Regelmäßige Weiterbildung"
     ]
   },
   "services": {
@@ -55,22 +56,36 @@
         "title": "Permanent Make-up",
         "items": [
           {
-            "name": "Permanent Make-up\n(Augenbrauen, Lippen, Lidstrich)",
-            "description": "Erstbehandlung",
+            "name": "Augenbrauen",
+            "description": "Natürliche, definierte Brauenformen durch Permanent Make-up. Perfekt für einen gepflegten Look ohne tägliches Nachzeichnen.",
             "price": "250 €",
-            "correction": "Korrektur (obligatorisch) nach 1–3 Monaten: 110 €",
+            "correction": "Korrektur nach 1–3 Monaten: 110 €",
             "image": "/images/services/pm.jpg"
           },
           {
-            "name": "Permanent Make-up zwischen den Wimpern\n(Wimpernkranzverdichtung)",
-            "description": "Erstbehandlung",
-            "price": "120 €",
-            "correction": "Korrektur: 70 €",
+            "name": "Lippen",
+            "description": "Sanfte Lippenkonturierung und -pigmentierung für einen natürlichen, vollen Lippenlook.",
+            "price": "250 €",
+            "correction": "Korrektur nach 1–3 Monaten: 110 €",
+            "image": "/images/services/pm.jpg"
+          },
+          {
+            "name": "Lidstrich",
+            "description": "Definierter Lidstrich für attraktive, vergrößerte Blicke ohne tägliches Eyeliner-Auftragen.",
+            "price": "250 €",
+            "correction": "Korrektur nach 1–3 Monaten: 110 €",
             "image": "/images/services/lash-line.jpg"
           },
           {
+            "name": "Wimpernkranzverdichtung / Zwischen den Wimpern",
+            "description": "Subtile Verdichtung des Wimpernkranzes für natürlich voluminöse Wimpern.",
+            "price": "120 €",
+            "correction": "Korrektur: 70 €",
+            "image": "/images/services/lash-enhancement.jpg"
+          },
+          {
             "name": "Entfernung von Permanent Make-up mit Remover",
-            "description": "Eine Behandlung",
+            "description": "Sichere Entfernung von altem Permanent Make-up mit professionellen Remover-Verfahren.",
             "price": "80 €",
             "correction": "",
             "image": "/images/services/remover.jpg"
@@ -78,69 +93,130 @@
         ],
         "note": "Auffrischung des Permanent Make-ups nach 1–2 Jahren: 30 % des ursprünglichen Preises."
       },
+      "waxing_brows_lashes": {
+        "title": "Wimpern, Augenbrauen & Waxen",
+        "items": [
+          {
+            "name": "Wimpernlifting",
+            "description": "Natürlich angewinkelte, längere Wimpern durch professionelles Lifting. Keine Extensions nötig – reine Schönung Ihrer eigenen Wimpern.",
+            "price": "45 €",
+            "image": "/images/services/lash-lifting.jpg"
+          },
+          {
+            "name": "Augenbrauen färben + Formen (Wachs / Pinzette)",
+            "description": "Perfekt geformte und farblich abgestimmte Brauen für einen frischen, aufgeräumten Look.",
+            "price": "45 €",
+            "image": "/images/services/brows.jpg"
+          },
+          {
+            "name": "Brow Lifting + Färben + Formen",
+            "description": "Kombinierte Behandlung: Lifting für voluminöse Brauen, gefolgt von Färben und präziser Formgebung.",
+            "price": "60 €",
+            "image": "/images/services/brows.jpg"
+          },
+          {
+            "name": "Gesichts-Waxing für Damen",
+            "description": "Sanfte Haarentfernung im Gesicht – Oberlippe, Kinn oder komplette Gesichtspflege.",
+            "price": "15 €",
+            "image": "/images/services/facial-waxing.jpg"
+          }
+        ]
+      },
       "cosmetology": {
         "title": "Ästhetische Kosmetologie",
         "items": [
           {
-            "name": "Komplexbehandlung + LED-Therapie",
-            "description": "Bei Pigmentierung, Hautverjüngung, Couperose/Rosacea und Akne.",
-            "duration": "ca. 1–2 Stunden",
-            "price": "95 €",
-            "image": "/images/services/complex.jpg"
-          },
-          {
-            "name": "Reinigung + Peeling + LED",
-            "description": "Für leichte Hautunreinheiten.",
+            "name": "Reinigung + Peeling + LED, leichte Unreinheiten",
+            "description": "Sanfte Reinigung mit Peeling und LED-Therapie für normale Hautunreinheiten.",
             "duration": "60 Minuten",
             "price": "70 €",
             "image": "/images/services/peeling-mild.jpg"
           },
           {
-            "name": "Reinigung + Peeling + LED",
-            "description": "Für ausgeprägte Hautunreinheiten.",
+            "name": "Reinigung + Peeling + LED, ausgeprägte Unreinheiten",
+            "description": "Intensivere Behandlung für größere Zonen mit Hautunreinheiten.",
             "duration": "90 Minuten",
             "price": "85 €",
             "image": "/images/services/peeling-strong.jpg"
           },
           {
             "name": "Peeling + Maske",
-            "description": "Sanftes Peeling kombiniert mit einer pflegenden Maske.",
-            "price": "50 €",
+            "description": "Sanftes Peeling kombiniert mit einer pflegenden Maske für strahlende Haut.",
+            "price": "60 €",
             "image": "/images/services/peeling-mask.jpg"
           },
           {
-            "name": "Fraktionierte Mesotherapie",
-            "description": "Innovative Hautverjüngung mittels fraktionierter Mesotherapie.",
+            "name": "Microneedling / Fraktionierte Mesotherapie",
+            "description": "Innovative Hautverjüngung durch Mikronadeln und aktive Wirkstoffe für straffere, jugendliche Haut.",
             "price": "110 €",
             "image": "/images/services/mesotherapy.jpg"
           },
           {
-            "name": "Fermentotherapie",
-            "description": "Enzymbasierte Behandlung zur Regeneration der Haut.",
+            "name": "Bioenzymatische Therapie / Fermentotherapie",
+            "description": "Enzymbasierte Behandlung zur tiefenregenerierenden Hautpflege und Zellaktivierung.",
             "price": "100 €",
             "image": "/images/services/fermentotherapy.jpg"
           },
           {
-            "name": "Gesichtsmassage + Maske",
-            "description": "Mit Multivitamin-Serum.",
+            "name": "Carboxytherapie",
+            "description": "Behandlung mit Kohlendioxid für verbesserte Durchblutung und Hautstraffung.",
+            "price": "100 €",
+            "image": "/images/services/carboxy.jpg"
+          },
+          {
+            "name": "Tiefenreinigung + Gesichtsmassage + Maske + 3 Multivitamin-Seren",
+            "description": "Umfassende Pflegebehandlung mit Massage und vitalisierenden Seren.",
             "price": "85 €",
             "image": "/images/services/facial-massage.jpg"
           },
           {
-            "name": "Hautrehabilitation",
-            "description": "Für trockene und dehydrierte Haut.",
+            "name": "Hautrehabilitation / Hautregeneration",
+            "description": "Spezielle Behandlung für trockene und dehydrierte Haut zur Wiederherstellung der Barrierefunktion.",
             "price": "80 €",
             "image": "/images/services/skin-rehab.jpg"
           },
           {
-            "name": "Gesichts-Waxing für Damen",
-            "description": "Oberlippe.",
-            "price": "15 €",
-            "image": "/images/services/facial-waxing.jpg"
+            "name": "Behandlungskomplex + LED-Therapie bei Pigmentierung / Anti-Aging",
+            "description": "Zielgerichtete Behandlung bei Pigmentflecken und ersten Anzeichen der Hautalterung.",
+            "price": "95 €",
+            "image": "/images/services/complex.jpg"
+          },
+          {
+            "name": "Behandlung bei Couperose / Rosazea / Akne",
+            "description": "Beruhigende Spezialbehandlung für empfindliche, rötliche oder akneanfällige Haut.",
+            "price": "95 €",
+            "image": "/images/services/complex.jpg"
           }
         ]
       }
     }
+  },
+  "special_offers": {
+    "headline": "Sonderangebote",
+    "subheadline": "Profitieren Sie von unseren aktuellen Aktionen und Paketen zu attraktiven Preisen.",
+    "items": [
+      {
+        "title": "Premium-Pflegekomplex",
+        "description": "Reinigung + Massage + Maske + LED-Therapie (2 Stunden)",
+        "original_price": "125 €",
+        "sale_price": "100 €",
+        "savings": "25 € sparen"
+      },
+      {
+        "title": "2 Zonen Permanent Make-up",
+        "description": "Augenbrauen + Lippen zusammen",
+        "original_price": "500 €",
+        "sale_price": "390 €",
+        "savings": "110 € sparen"
+      },
+      {
+        "title": "Wimpern-Look Komplett",
+        "description": "Wimpernlifting + Augenbrauen färben",
+        "original_price": "90 €",
+        "sale_price": "75 €",
+        "savings": "15 € sparen"
+      }
+    ]
   },
   "portfolio": {
     "headline": "Kunst im Detail",

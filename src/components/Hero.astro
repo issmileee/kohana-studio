@@ -1,5 +1,5 @@
 ---
-// Hero section — conversion-first, with auto-rotating background slideshow (10s crossfade)
+// Hero section — video background with image slideshow fallback
 const { eyebrow, headline, subheadline, cta_primary, cta_secondary, whatsappLink } = Astro.props;
 
 const heroImages = [
@@ -11,15 +11,20 @@ const heroImages = [
 ---
 
 <section class="relative min-h-[90vh] flex items-center pt-20">
-  <!-- Slideshow background with crossfade -->
-  <div class="absolute inset-0 z-0" id="hero-slideshow" aria-hidden="true">
-    {heroImages.map((src, i) => (
-      <div
-        class:list={["hero-slide absolute inset-0 bg-cover bg-center transition-opacity duration-[1500ms] ease-in-out", i === 0 ? "opacity-40" : "opacity-0"]}
-        data-slide={i}
-        style={`background-image: url('${src}')`}
-      ></div>
-    ))}
+  <!-- Video Background -->
+  <div class="absolute inset-0 z-0 overflow-hidden">
+    <video
+      autoplay
+      muted
+      loop
+      playsinline
+      poster="/videos/poster-0.jpg"
+      class="w-full h-full object-cover"
+      aria-hidden="true"
+    >
+      <source src="/videos/studio-tour.mp4" type="video/mp4">
+      <source src="/videos/studio-tour.webm" type="video/webm">
+    </video>
     <!-- Warm gradient overlay: left-heavy so text stays readable -->
     <div class="absolute inset-0 bg-gradient-to-r from-surface via-surface/85 to-transparent"></div>
   </div>
@@ -55,61 +60,4 @@ const heroImages = [
       </div>
     </div>
   </div>
-
-  <!-- Slide indicators (dots) -->
-  <div class="absolute bottom-8 right-6 md:right-12 z-20 flex gap-2" id="hero-dots">
-    {heroImages.map((_, i) => (
-      <button
-        class:list={["w-2 h-2 rounded-full transition-all duration-300", i === 0 ? "bg-primary w-6" : "bg-outline/50 hover:bg-primary/60"]}
-        data-dot={i}
-        aria-label={`Slide ${i + 1}`}
-      ></button>
-    ))}
-  </div>
 </section>
-
-<script>
-  const slides = document.querySelectorAll<HTMLElement>("#hero-slideshow .hero-slide");
-  const dots = document.querySelectorAll<HTMLElement>("#hero-dots [data-dot]");
-  const INTERVAL = 10000; // 10 seconds
-
-  let current = 0;
-  let timer: ReturnType<typeof setInterval>;
-
-  function show(index: number) {
-    slides.forEach((s, i) => {
-      // active slide gets opacity-40 (visible over gradient), others fade to 0
-      s.classList.toggle("opacity-40", i === index);
-      s.classList.toggle("opacity-0", i !== index);
-    });
-    dots.forEach((d, i) => {
-      d.classList.toggle("bg-primary", i === index);
-      d.classList.toggle("w-6", i === index);
-      d.classList.toggle("bg-outline/50", i !== index);
-      d.classList.toggle("w-2", i !== index);
-    });
-    current = index;
-  }
-
-  function next() {
-    show((current + 1) % slides.length);
-  }
-
-  function startTimer() {
-    timer = setInterval(next, INTERVAL);
-  }
-
-  function resetTimer() {
-    clearInterval(timer);
-    startTimer();
-  }
-
-  dots.forEach((dot, i) => {
-    dot.addEventListener("click", () => {
-      show(i);
-      resetTimer();
-    });
-  });
-
-  if (slides.length > 1) startTimer();
-</script>

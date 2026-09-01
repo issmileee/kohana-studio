@@ -1,12 +1,14 @@
 ---
 // Card body for service cards (shared between mobile stack & desktop grid)
 const { item, whatsappLink, bookLabel } = Astro.props;
+const serviceName = item.name || '';
+const isFullCrop = serviceName.includes('Carboxytherapie') || serviceName.includes('Fermentotherapie');
 ---
 
 <div class="aspect-[4/3] overflow-hidden bg-surface-container/60 relative">
   <div
-    class="w-full h-full bg-cover bg-center transition-transform duration-500 hover:scale-102"
-    style={`background-image: url('${item.image || '/images/services/cosmo.jpg'}'); background-size: contain; background-position: center; background-repeat: no-repeat;`}
+    class="w-full h-full transition-transform duration-500 hover:scale-102"
+    style={`background-image: url('${item.image || '/images/services/cosmo.jpg'}'); background-position: center; background-repeat: no-repeat; background-size: ${isFullCrop ? 'cover' : 'contain'};`}
   ></div>
 </div>
 <div class="p-5 flex flex-col flex-grow">

@@ -106,13 +106,13 @@
             "name": "Augenbrauen färben + Formen (Wachs / Pinzette)",
             "description": "Perfekt geformte und farblich abgestimmte Brauen für einen frischen, aufgeräumten Look.",
             "price": "45 €",
-            "image": "/images/services/brows.jpg"
+            "image": "/images/services/brow-shaping.jpg"
           },
           {
             "name": "Brow Lifting + Färben + Formen",
             "description": "Kombinierte Behandlung: Lifting für voluminöse Brauen, gefolgt von Färben und präziser Formgebung.",
             "price": "60 €",
-            "image": "/images/services/brows.jpg"
+            "image": "/images/services/brow-lifting.jpg"
           },
           {
             "name": "Gesichts-Waxing für Damen",

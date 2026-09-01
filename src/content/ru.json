@@ -154,13 +154,13 @@
             "name": "Окраска и оформление бровей",
             "description": "Идеально оформленные и подобранные по цвету брови для свежего образа.",
             "price": "45 €",
-            "image": "/images/services/brows.jpg"
+            "image": "/images/services/brow-shaping.jpg"
           },
           {
             "name": "Поднятие бровей + Окраска + Оформление",
             "description": "Комбинированная процедура: lifting для объемных бровей, затем окраска и точное оформление.",
             "price": "60 €",
-            "image": "/images/services/brows.jpg"
+            "image": "/images/services/brow-lifting.jpg"
           },
           {
             "name": "Восковая депиляция лица для женщин",

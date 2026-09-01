@@ -6,7 +6,7 @@ const { item, whatsappLink, bookLabel } = Astro.props;
 <div class="aspect-[4/3] overflow-hidden bg-surface-container/60 relative">
   <div
     class="w-full h-full bg-cover bg-center transition-transform duration-500 hover:scale-102"
-    style={`background-image: url('${item.image || '/images/services/cosmo.jpg'}'); background-size: cover; background-position: center;`}
+    style={`background-image: url('${item.image || '/images/services/cosmo.jpg'}'); background-size: contain; background-position: center; background-repeat: no-repeat;`}
   ></div>
 </div>
 <div class="p-5 flex flex-col flex-grow">

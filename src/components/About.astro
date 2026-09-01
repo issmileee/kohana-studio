@@ -1,18 +1,19 @@
 ---
-// About section — founder story + trust bridge
+// About section — founder story + trust bridge with video player / studio tour
 const { eyebrow, headline, intro, story, philosophy, quote, image } = Astro.props;
 ---
 
 <section id="about" class="py-section-gap px-margin-mobile md:px-margin-desktop">
   <div class="max-w-container-max mx-auto">
-    <!-- Top: headline + portrait -->
-    <div class="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
-      <div>
+    <!-- Top: headline + story / media -->
+    <div class="grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+      <!-- Story Column (Left) -->
+      <div class="lg:col-span-7">
         <p class="font-body text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4">
           {eyebrow}
         </p>
-        <h2 class="font-display text-4xl md:text-5xl text-on-surface mb-6">{headline}</h2>
-        <p class="font-body text-lg text-on-surface-variant leading-relaxed mb-6">{intro}</p>
+        <h2 class="font-display text-4xl md:text-5xl text-on-surface mb-6 leading-tight">{headline}</h2>
+        <p class="font-body text-lg text-on-surface-variant leading-relaxed mb-6 font-medium">{intro}</p>
         <p class="font-body text-on-surface-variant leading-relaxed mb-6">{story}</p>
         <p class="font-body text-on-surface-variant leading-relaxed mb-8">{philosophy}</p>
         <blockquote class="border-l-2 border-primary pl-6">
@@ -21,19 +22,47 @@ const { eyebrow, headline, intro, story, philosophy, quote, image } = Astro.prop
           </p>
         </blockquote>
       </div>
-      <div class="relative">
-        <div
-          class="aspect-[3/4] rounded-2xl overflow-hidden bg-surface-container border border-outline-variant/20"
-        >
-          <img
-            src={image}
-            alt="Anna Kohut — Founder & Aesthetic Expert"
-            class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
-            loading="lazy"
-          />
+
+      <!-- Media Column: Studio Video Tour & Founder Portrait (Right) -->
+      <div class="lg:col-span-5 flex flex-col gap-6">
+        <!-- Studio Video Player -->
+        <div class="relative rounded-2xl overflow-hidden bg-surface-container border border-outline-variant/20 shadow-md group">
+          <video
+            controls
+            playsinline
+            preload="metadata"
+            poster="/videos/poster-0.jpg"
+            class="w-full aspect-[4/3] object-cover rounded-2xl"
+          >
+            <source src="/videos/studio-tour.mp4" type="video/mp4" />
+            <source src="/videos/studio-tour.webm" type="video/webm" />
+            Ihr Browser unterstützt dieses Video-Format leider nicht.
+          </video>
+          <div class="p-4 bg-surface-container-lowest border-t border-outline-variant/15 flex items-center justify-between">
+            <div>
+              <p class="font-display text-base text-on-surface font-semibold">Studio Tour & Einblick</p>
+              <p class="font-body text-xs text-on-surface-variant">Einblick in unser Kosmetikstudio & Behandlungsräume</p>
+            </div>
+            <span class="material-symbols-outlined text-primary text-2xl">videocam</span>
+          </div>
         </div>
-        <!-- Decorative gold accent -->
-        <div class="absolute -bottom-6 -left-6 w-32 h-32 bg-primary-container/10 rounded-full blur-2xl"></div>
+
+        <!-- Anna Portrait Card -->
+        <div class="relative flex items-center gap-4 p-4 rounded-xl bg-surface-container-low border border-outline-variant/20 shadow-sm">
+          <div class="w-20 h-20 rounded-lg overflow-hidden shrink-0 bg-surface-container border border-outline-variant/20">
+            <img
+              src={image}
+              alt="Anna Kohut — Founder & Aesthetic Expert"
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+          <div>
+            <h3 class="font-display text-lg text-on-surface font-bold">Anna Kohut</h3>
+            <p class="font-body text-xs text-primary font-semibold uppercase tracking-wider">Founder & Aesthetic Expert</p>
+            <p class="font-body text-xs text-on-surface-variant mt-1">7 Jahre Erfahrung · Zertifizierte Kosmetikerin</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>

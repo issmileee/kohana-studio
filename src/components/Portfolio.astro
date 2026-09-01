@@ -75,11 +75,11 @@ const groups = filters
                 class="pf-stack-card bg-surface-container-lowest rounded-xl overflow-hidden border border-outline-variant/20 shadow-md"
                 style={`--stack-top: ${112 + idx * 14}px`}
               >
-                <div class="aspect-[4/3] overflow-hidden bg-surface-container">
+                <div class="aspect-[4/3] overflow-hidden bg-surface-container/40 flex items-center justify-center p-1">
                   <img
                     src={item.image}
                     alt={item.title}
-                    class="w-full h-full object-cover"
+                    class="w-full h-full object-contain md:object-cover rounded-lg"
                     loading="lazy"
                   />
                 </div>
@@ -124,14 +124,14 @@ const groups = filters
       <div class="grid grid-cols-2 lg:grid-cols-3 gap-6" id="portfolio-grid">
         {items.map((item) => (
           <div
-            class="portfolio-item group relative rounded-xl overflow-hidden border border-outline-variant/20 shadow-sm"
+            class="portfolio-item group relative rounded-xl overflow-hidden border border-outline-variant/20 shadow-sm bg-surface-container/20"
             data-category={item.category}
           >
-            <div class="aspect-square overflow-hidden">
+            <div class="aspect-square overflow-hidden flex items-center justify-center p-2">
               <img
                 src={item.image}
                 alt={item.title}
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                class="w-full h-full object-contain group-hover:scale-102 transition-transform duration-500 rounded-lg"
                 loading="lazy"
               />
             </div>
